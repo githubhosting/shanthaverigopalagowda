@@ -79,7 +79,7 @@ function Poem() {
             </div>
           </div>
           <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-16">
-            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-8">
               <blockquote>
                 <div>
                   <svg
@@ -297,7 +297,7 @@ export default function Home({ articles }) {
                 src={portraitImage2}
                 alt="Shanthaveri Gopala Gowda Image"
                 sizes="(min-width: 1024px) 32rem, 20rem"
-                className="aspect-auto rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                className="aspect-auto rounded-2xl bg-zinc-100 object-cover shadow-lg dark:bg-zinc-800"
               />
             </div>
           </div>
@@ -388,49 +388,14 @@ export default function Home({ articles }) {
             </ul>
           </div>
         </div>
-      </Container>
-
-      {/* <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-            <SocialLink
-              href="https://youtube.com"
-              aria-label="Follow on Facebook"
-              icon={YouTubeIcon}
-            />
-            <SocialLink
-              href="https://facebook.com"
-              aria-label="Follow on Facebook"
-              icon={checkIcon}
-            />
-          </div>
+        <div className="mt-10 flex items-center justify-center rounded-xl bg-slate-50 p-5 shadow-md dark:bg-gray-800 dark:text-white">
+          <h2 className="text-center font-bold italic">
+            Please join us as we commemorate his centenary birth year and
+            celebrate his enduring legacy.
+          </h2>
         </div>
-      </Container> */}
-      <Container className="mt-6 md:mt-7">
+      </Container>
+      <Container className="mt-6 border-t dark:border-zinc-700/40 md:mt-7">
         <Poem />
         <Timeline />
       </Container>

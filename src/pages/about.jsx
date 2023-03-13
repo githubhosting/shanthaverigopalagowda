@@ -14,6 +14,7 @@ import {
   YouTubeIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/potrait.png'
+import { Button } from '@/components/Button'
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
@@ -59,10 +60,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About - Spencer Sharp</title>
+        <title>About - Shanthaveri Gopala Gowda</title>
         <meta
           name="description"
-          content="I’m Spencer Sharp. I live in New York City, where I design the future."
+          content="This page is about Shanthaveri Gopala Gowda"
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
@@ -118,7 +119,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="lg:pl-20">
+          <div className="lg:pl-28">
             <ul role="list">
               <SocialLinks
                 href="https://www.facebook.com/people/Shanthaveri-GopalaGowda/100087288491865/"
@@ -153,6 +154,15 @@ export default function About() {
               >
                 +91 9901803300
               </SocialLinks>
+              <Button
+                href="https://en.wikipedia.org/wiki/Shantaveri_Gopala_Gowda"
+                className="mt-8 flex w-full"
+              >
+                Wikipedia
+              </Button>
+              <Button href="#" className="mt-8 flex w-full">
+                Donate
+              </Button>
             </ul>
           </div>
         </div>
