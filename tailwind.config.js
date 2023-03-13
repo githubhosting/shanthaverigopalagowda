@@ -19,6 +19,17 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
+    extend: {
+      colors: {
+        insp: {
+          100: '#0066ff',
+          200: '#072A6C',
+          300: '#05014A',
+        },
+        insp2: '#05014A',
+        insp3: '#072A6C',
+      },
+    },
     typography: (theme) => ({
       invert: {
         css: {

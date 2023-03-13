@@ -9,6 +9,9 @@ import {
   InstagramIcon,
   GitHubIcon,
   LinkedInIcon,
+  checkIcon,
+  phoneIcon,
+  YouTubeIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/potrait.png'
 
@@ -20,6 +23,21 @@ function SocialLink({ className, href, children, icon: Icon }) {
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
+        <span className="ml-4">{children}</span>
+      </Link>
+    </li>
+  )
+}
+
+function SocialLinks({ className, href, children, icon: Icon }) {
+  return (
+    <li className={clsx(className, 'flex')}>
+      <Link
+        href={href}
+        target="_blank"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-sky-500 dark:text-zinc-200 dark:hover:text-sky-500"
+      >
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-sky-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -61,59 +79,80 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I’m Spencer Sharp. I live in New York City, where I design the
-              future.
+              Shanthaveri Gopala Gowda
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember, and
-                wrote my first program when I was 6 years old, just two weeks
-                after my mom brought home the brand new Macintosh LC 550 that I
-                taught myself to type on.
+                A Firebrand politician who understood the culture of the land
+                being a villager himself had a great following amongst the
+                farmers and the farming community of Karnataka. A well-read
+                person with a great love for the Kannada language, Sri
+                Shanthaveri Gopal Gowda was a close friend to many intellectual
+                and literary luminaries such as the poet, Sri Gopalakrishna
+                Adiga, the novelist, Dr. U.R. Ananthamurthy, writer and
+                journalist, P. Lankesh and the farmers’ Association leader, M.D.
+                Nanjundaswamy. Dr. Ananthamurthy wrote the novel- Avasthe
+                (‘’State of Life’’) based on the life of Sri Gopal Gowda. This
+                was made into a sensitive film of the same name with Dr. Anant
+                Nag playing the lead role.
               </p>
               <p>
-                The only thing I loved more than computers as a kid was space.
-                When I was 8, I climbed the 40-foot oak tree at the back of our
-                yard while wearing my older sister’s motorcycle helmet, counted
-                down from three, and jumped — hoping the tree was tall enough
-                that with just a bit of momentum I’d be able to get to orbit.
+                A rare idealist and a daredevil leader - his Kagodu Satyagraha,
+                an indefinite fast held to provide justice to the farmers of
+                Karnataka is still fresh in the minds of Karnataka people. His
+                death at an early age heralded the slow decline of the socialist
+                movement in Karnataka. M.D. Nanjundaswamy was one of the few to
+                carry forward the movement along the lines that Sri Gopal Gowda
+                envisaged. Gowda played a pivotal role in drawing the attention
+                of the nation to the plight of the farmers.
               </p>
               <p>
-                I spent the next few summers indoors working on a rocket design,
-                while I recovered from the multiple surgeries it took to fix my
-                badly broken legs. It took nine iterations, but when I was 15 I
-                sent my dad’s Blackberry into orbit and was able to transmit a
-                photo back down to our family computer from space.
-              </p>
-              <p>
-                Today, I’m the founder of Planetaria, where we’re working on
-                civilian space suits and manned shuttle kits you can assemble at
-                home so that the next generation of kids really <em>can</em>{' '}
-                make it to orbit — from the comfort of their own backyards.
+                This website would give you a glimpse into the life and times of
+                Sri Gopal Gowda, and his simplicity while still pursuing the
+                highest ideals of service to the people with missionary zeal,
+                dedication, and commitment. His sacrifice and contribution to
+                our state, Karnataka, and therefore to the nation is still
+                fondly remembered even today by various leaders and torchbearers
+                of our Democracy. He is the epitome of how a political leader
+                should conduct himself in both political and personal life.
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <ul role="list">
-              <SocialLink href="#" icon={TwitterIcon}>
-                Follow on Twitter
-              </SocialLink>
-              <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-                Follow on Instagram
-              </SocialLink>
-              <SocialLink href="#" icon={GitHubIcon} className="mt-4">
-                Follow on GitHub
-              </SocialLink>
-              <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
-                Follow on LinkedIn
-              </SocialLink>
-              <SocialLink
-                href="mailto:spencer@planetaria.tech"
-                icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+              <SocialLinks
+                href="https://www.facebook.com/people/Shanthaveri-GopalaGowda/100087288491865/"
+                icon={checkIcon}
               >
-                spencer@planetaria.tech
-              </SocialLink>
+                Follow on Facebook
+              </SocialLinks>
+              <SocialLinks
+                href="https://twitter.com/GShanthaveri"
+                icon={TwitterIcon}
+                className="mt-4"
+              >
+                Follow on Twitter
+              </SocialLinks>
+              <SocialLinks href="#" icon={InstagramIcon} className="mt-4">
+                Follow on Instagram
+              </SocialLinks>
+              <SocialLinks href="#" icon={YouTubeIcon} className="mt-4">
+                Subscribe on YouTube
+              </SocialLinks>
+              <SocialLinks
+                href="mailto:shanthaveri@gmail.com"
+                icon={MailIcon}
+                className="mt-8 pt-8"
+              >
+                shanthaveri@gmail.com
+              </SocialLinks>
+              <SocialLinks
+                href="tel:9901803300"
+                icon={phoneIcon}
+                className="pt-8"
+              >
+                +91 9901803300
+              </SocialLinks>
             </ul>
           </div>
         </div>

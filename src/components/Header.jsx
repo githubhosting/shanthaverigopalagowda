@@ -1,6 +1,7 @@
 import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import React, { useState, usePopper } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
@@ -121,11 +122,14 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                <MobileNavItem href="/about">About</MobileNavItem>
-                <MobileNavItem href="/articles">Articles</MobileNavItem>
-                <MobileNavItem href="/projects">Projects</MobileNavItem>
-                <MobileNavItem href="/speaking">Speaking</MobileNavItem>
-                <MobileNavItem href="/uses">Uses</MobileNavItem>
+                <MobileNavItem href="/committee">
+                  Centenary Commemoration Committee
+                </MobileNavItem>
+                <MobileNavItem href="/programs">Programs</MobileNavItem>
+                <MobileNavItem href="/gallery">Gallery</MobileNavItem>
+                <MobileNavItem href="/letters">Letters</MobileNavItem>
+                <MobileNavItem href="/media">Media</MobileNavItem>
+                <MobileNavItem href="/contactus">Contact Us</MobileNavItem>
               </ul>
             </nav>
           </Popover.Panel>
@@ -145,8 +149,8 @@ function NavItem({ href, children }) {
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
-            ? 'text-teal-500 dark:text-teal-400'
-            : 'hover:text-teal-500 dark:hover:text-teal-400'
+            ? 'text-sky-500 dark:text-sky-400'
+            : 'hover:text-sky-500 dark:hover:text-sky-400'
         )}
       >
         {children}
@@ -162,11 +166,12 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/speaking">Speaking</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
+        <NavItem href="/committee">Centenary Committee</NavItem>
+        <NavItem href="/programs">Programs</NavItem>
+        <NavItem href="/gallery">Gallery</NavItem>
+        <NavItem href="/letters">Letters</NavItem>
+        <NavItem href="/media">Media</NavItem>
+        <NavItem href="/contactus">Contact Us</NavItem>
       </ul>
     </nav>
   )
@@ -244,6 +249,66 @@ function Avatar({ large = false, className, ...props }) {
         priority
       />
     </Link>
+  )
+}
+function Homebutton() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6 dark:stroke-slate-50"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+      />
+    </svg>
+  )
+}
+function LanguageToggle() {
+  let { locale, locales, defaultLocale, asPath } = useRouter()
+  let [isOpen, setIsOpen] = useState(false)
+  let [isInitial, setIsInitial] = useState(true)
+
+  useEffect(() => {
+    setIsInitial(false)
+  }, [])
+
+  let isEnglish = locale === 'en'
+  let isEnglishDefault = defaultLocale === 'en'
+
+  let language = isEnglish ? 'English' : 'Kannaga'
+  let languageIcon = isEnglish ? 'EN' : 'KA'
+
+  let otherLanguage = isEnglish ? 'Kannada' : 'English'
+  let otherLanguageIcon = isEnglish ? 'KA' : 'EN'
+
+  let toggleRef = useRef()
+
+  let handleToggleClick = () => {
+    setIsOpen((isOpen) => !isOpen)
+  }
+
+  return (
+    <div className="relative">
+      <button
+        ref={toggleRef}
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-label="Toggle language"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
+        onClick={handleToggleClick}
+      >
+        <span className="text-md font-medium dark:text-white">
+          {languageIcon}
+        </span>
+      </button>
+    </div>
   )
 }
 
@@ -359,38 +424,6 @@ export function Header() {
           marginBottom: 'var(--header-mb)',
         }}
       >
-        {isHomePage && (
-          <>
-            <div
-              ref={avatarRef}
-              className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
-            />
-            <Container
-              className="top-0 order-last -mb-3 pt-3"
-              style={{ position: 'var(--header-position)' }}
-            >
-              <div
-                className="top-[var(--avatar-top,theme(spacing.3))] w-full"
-                style={{ position: 'var(--header-inner-position)' }}
-              >
-                <div className="relative">
-                  <AvatarContainer
-                    className="absolute left-0 top-3 origin-left transition-opacity"
-                    style={{
-                      opacity: 'var(--avatar-border-opacity, 0)',
-                      transform: 'var(--avatar-border-transform)',
-                    }}
-                  />
-                  <Avatar
-                    large
-                    className="block h-16 w-16 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
-                </div>
-              </div>
-            </Container>
-          </>
-        )}
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
@@ -402,13 +435,23 @@ export function Header() {
           >
             <div className="relative flex gap-4">
               <div className="flex flex-1">
+                {isHomePage && (
+                  <div>
+                    <div className="flex justify-center">
+                      <LanguageToggle />
+                    </div>
+                  </div>
+                )}
                 {!isHomePage && (
-                  <AvatarContainer>
-                    <Avatar />
-                  </AvatarContainer>
+                  <Link
+                    href="/"
+                    className="ring-zinc-900/5backdrop-blur dark:shadow-5xl pointer-events-auto mr-5 flex items-center justify-center rounded-full bg-white/90 p-2 align-middle shadow-lg shadow-zinc-800/5 ring-1 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                  >
+                    <Homebutton />
+                  </Link>
                 )}
               </div>
-              <div className="flex flex-1 justify-end md:justify-center">
+              <div className="flex justify-end md:items-center md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
@@ -421,7 +464,6 @@ export function Header() {
           </Container>
         </div>
       </header>
-      {isHomePage && <div style={{ height: 'var(--content-offset)' }} />}
     </>
   )
 }
