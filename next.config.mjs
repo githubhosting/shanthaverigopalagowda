@@ -11,6 +11,9 @@ const nextConfig = {
     newNextLinkBehavior: true,
     scrollRestoration: true,
   },
+  images: {
+    domains: ['user-images.githubusercontent.com'],
+  },
 }
 
 const withMDX = nextMDX({

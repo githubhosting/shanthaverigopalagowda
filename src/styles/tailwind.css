@@ -2,6 +2,10 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
+@font-face {
+  font-family: "Malige";
+  src: url("../public/fonts/Malige.ttf");
+}
 
 .custom-overlay__caption {
   background-color: rgba(0, 0, 0, 0.8);
@@ -28,4 +32,8 @@
   color: black;
   vertical-align: baseline;
   margin: 2px;
+}
+
+.ReactGridGallery_tile{
+  background-color: transparent !important;
 }

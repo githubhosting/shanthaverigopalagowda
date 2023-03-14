@@ -18,6 +18,7 @@ import {
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/potrait.png'
 import portraitImage2 from '@/images/shanthaverigopalagowda.png'
+import circleImage from '@/images/ShanthaveriGopalaGowdaCircle.png'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
@@ -39,9 +40,9 @@ function SocialLinks({ className, href, children, icon: Icon }) {
       <Link
         href={href}
         target="_blank"
-        className="group flex text-sm font-medium text-zinc-800 transition hover:text-sky-500 dark:text-zinc-200 dark:hover:text-sky-500"
+        className="group flex text-sm font-medium text-zinc-800 transition hover:text-insp-100 dark:text-zinc-200 dark:hover:text-sky-500"
       >
-        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-sky-500" />
+        <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-insp-100 dark:group-hover:fill-sky-500" />
         <span className="ml-4">{children}</span>
       </Link>
     </li>
@@ -60,9 +61,9 @@ function MailIcon(props) {
 }
 function Poem() {
   return (
-    <div className="pt-4 lg:py-6">
+    <div className="border-t pt-4 dark:border-zinc-700 lg:py-6">
       <div className="bg-grey-900 pb-8 lg:relative lg:z-10 lg:pb-0">
-        <div className="items-center lg:ml-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-4 lg:px-8">
+        <div className="items-center lg:ml-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-4 lg:px-8">
           <div className="relative lg:-my-8">
             <div
               aria-hidden="true"
@@ -78,7 +79,7 @@ function Poem() {
               </div>
             </div>
           </div>
-          <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-16">
+          <div className="mt-12 lg:m-0 lg:pl-16">
             <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-8">
               <blockquote>
                 <div>
@@ -90,7 +91,7 @@ function Poem() {
                   >
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>
-                  <p className="mt-6 text-base font-medium dark:text-white">
+                  <p className="mt-6 font-malige text-base font-semibold tracking-wider text-zinc-800 dark:text-zinc-100">
                     ಬಂದೆ ಬಿಟ್ಟನೆ ಶಾರ್ವರಿ<br></br>
                     ಬಡವನ ಈ ಬಾಗಿಲಿಗೂ<br></br>
                     ಬಂದಂತೆ ಹಿಂದೆ ರಾಯಭಾರಿ ವಿದುರನ ಮನೆಗೆ.<br></br>
@@ -187,63 +188,63 @@ const timeline = [
       'He met with socialist leaders  such as Dr. Ramamanohar Lohia, Jayaprakash Narayan and Kamaldevi Chattopadhyay and joined their Socialist party  after quitting the Congress.',
   },
   {
-    id: 11,
+    id: 10,
     date: '1952',
     title: 'Got Elected as M.L.A.',
     description:
       'He got elected to the Karnataka Legislature (Mysore Vidhana Sabha) from Sagar-Hosanagar for the first time.',
   },
   {
-    id: 12,
+    id: 11,
     date: '1955',
     title: 'Rashtriya Samajwadi Party',
     description:
       'Was appointed as a key member of the Rashtriya Samajwadi Party.',
   },
   {
-    id: 13,
+    id: 12,
     date: '1957',
     title: 'Thirthahalli Constituency',
     description:
       'Contested from Thirthahalli Constituency and lost but established the Karnataka Samajwadi Youth Association.',
   },
   {
-    id: 14,
+    id: 13,
     date: '1960',
     title: 'Goa Agitation',
     description:
       'Took active part in the Goa Agitation and published the Samajwadi Party’s newsletter called “Margadarshi”',
   },
   {
-    id: 15,
+    id: 14,
     date: '1962',
     title: 'Elected as M.L.A',
     description:
       'Run with modest resources, borrowed from his supporters who rose above their  communal identities and rallied behind him  for his election campaigns. He enjoyed huge admiration and immense local support for his exemplary courage, integrity and charisma.',
   },
   {
-    id: 16,
+    id: 15,
     date: '1964',
     title: 'Marriage to Smt. Sonakka',
     description:
       'He married Smt. Sonakka, a school teacher  in 1964. One of the few marriages that was solemnized at Vidhana Soudha',
   },
   {
-    id: 17,
+    id: 16,
     date: '1967',
     title: 'Re-elected as M.L.A',
     description:
       'Was Reelected as M.L.A. from Thirthahalli Constituency. Daughter, Kum. Ila Geetha was born on ______, 1967at Namma Bengaluru.',
   },
   {
-    id: 18,
+    id: 17,
     date: '1968',
     title: 'Birth of Son - Ramamanohar',
     description:
       'Son, Mst. Ramamanohar was born on April 4th 1968 at Namma Bengaluru.',
   },
   {
-    id: 19,
+    id: 18,
     date: '9 June, 1971',
     title: 'Was admitted to Victoria Hospital',
     description:
@@ -253,7 +254,7 @@ const timeline = [
 function Timeline() {
   return (
     <>
-      <h1 className="mb-6 text-2xl font-bold tracking-tight text-insp-200 dark:text-zinc-100 sm:text-3xl">
+      <h1 className="mb-6 border-t pt-4 text-2xl font-bold tracking-tight text-insp-200 dark:border-zinc-700 dark:text-zinc-100 sm:text-3xl">
         About Shantaveri Gopala Gowda
       </h1>
       <ol className="border-l border-gray-300">
@@ -267,7 +268,7 @@ function Timeline() {
               </p>
             </div>
             <div className="mt-0.5 ml-4 mb-6">
-              <h4 className="mb-1.5 text-xl font-semibold text-gray-800 dark:text-white">
+              <h4 className="mb-1.5 text-lg lg:text-xl font-semibold text-zinc-800 dark:text-zinc-100">
                 {item.title}
               </h4>
               <p className="mb-3 text-gray-500">{item.description}</p>
@@ -395,7 +396,16 @@ export default function Home({ articles }) {
           </h2>
         </div>
       </Container>
-      <Container className="mt-6 border-t dark:border-zinc-700/40 md:mt-7">
+      <Container className="mt-6 md:mt-7">
+        <div className="border-t pb-8 dark:border-zinc-700/40"></div>
+        <Image
+          src={circleImage}
+          alt="Shanthaveri Gopala Gowda Image"
+          sizes="(min-width: 1024px) 32rem, 20rem"
+          className="aspect-auto rounded-2xl bg-zinc-100 object-cover shadow-lg dark:bg-zinc-800"
+        />
+      </Container>
+      <Container className="mt-6 md:mt-7">
         <Poem />
         <Timeline />
       </Container>

@@ -32,6 +32,9 @@ module.exports = {
         insp2: '#05014A',
         insp3: '#072A6C',
       },
+      fontFamily: {
+        malige: ['Malige'],
+      },
     },
     typography: (theme) => ({
       invert: {

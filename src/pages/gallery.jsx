@@ -36,6 +36,8 @@ import img13 from '@/images/gallery_img/gallery (13).png'
 import img14 from '@/images/gallery_img/gallery (14).png'
 import img15 from '@/images/gallery_img/gallery (15).png'
 import img16 from '@/images/gallery_img/gallery (16).png'
+import img17 from '@/images/gallery_img/gallery (17).png'
+import img18 from '@/images/gallery_img/gallery (18).png'
 
 const gallery = [
   'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(1).png',
@@ -86,7 +88,12 @@ const images = [
     original: { img3 },
     width: 375,
     height: 530,
-    caption: 'Family Pic of SGG - L to R(Standing) - ……………… L to R(Sitting):',
+    caption: 'Family Pic of SGG - L to R(Standing) - ……………… L to R(Sitting)',
+    customOverlay: (
+      <div className="custom-overlay__caption">
+        <div>Family Pic of SGG - L to R(Standing) - ……………… L to R(Sitting)</div>
+      </div>
+    ),
   },
   {
     src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(4).png',
@@ -180,8 +187,22 @@ const images = [
     height: 1742,
     caption: 'SGG with Smt. Indira Gandhi and ???',
   },
-]
+  {
+    src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(17).png',
+    original: { img17 },
+    width: 1200,
+    height: 821,
+    caption: '....',
+  },
+  {
+    src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(18).png',
+    original: { img18 },
+    width: 300,
+    height: 175,
+    caption: '...',
+  },
 
+]
 function GalleryNew() {
   const [index, setIndex] = useState(-1)
 
@@ -195,18 +216,26 @@ function GalleryNew() {
   const handleClose = () => setIndex(-1)
   const handleMovePrev = () => setIndex(prevIndex)
   const handleMoveNext = () => setIndex(nextIndex)
+
   return (
     <div>
       <Gallery
         images={images}
         onClick={handleClick}
         enableImageSelection={false}
+        thumbnailStyle={{
+          borderRadius: '8px',
+          boxShadow:
+            'rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px',
+        }}
       />
       {!!currentImage && (
         /* @ts-ignore */
         <Lightbox
-          mainSrc={currentImage.src}
-          imageTitle={currentImage.caption}
+          mainSrc={currentImage.original}
+          enableZoom={false}
+          animationDuration={500}
+          imageCaption={currentImage.caption}
           mainSrcThumbnail={currentImage.src}
           nextSrc={nextImage.original}
           nextSrcThumbnail={nextImage.src}
@@ -231,26 +260,11 @@ export default function Gallery_() {
           content="Gallery - Shri Shantaveri Gopala Gowda"
         />
       </Head>
-      <Container className="mt-16 sm:mt-32">
+      <Container className="mt-8 sm:mt-16">
+        <h1 className="pb-10 text-center text-4xl font-bold text-insp2 dark:text-white">
+          Gallery
+        </h1>
         <GalleryNew />
-        <section className="overflow-hidden text-gray-700 ">
-          <div className="container mx-auto px-5 py-2 lg:px-12 lg:pt-12">
-            <div className="-m-1 flex flex-wrap md:-m-2">
-              {gallery.map((item, index) => (
-                // eslint-disable-next-line react/jsx-key
-                <div className="flex w-1/3 flex-wrap">
-                  <div className="w-full p-1 md:p-2">
-                    <img
-                      alt="Gallery Images"
-                      className="block h-full w-full rounded-lg object-cover object-center"
-                      src={item}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </Container>
     </>
   )
