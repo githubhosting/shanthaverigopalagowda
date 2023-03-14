@@ -157,7 +157,7 @@ export default function Media() {
           Watch Youtube Videos
         </h1>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-8 md:flex-row">
+        <div className="mt-10">
           <div>
             <iframe
               className="aspect-video w-full rounded-lg shadow-lg"
@@ -167,7 +167,7 @@ export default function Media() {
               allowFullScreen
             ></iframe>
           </div>
-          <div>
+          <div className='mt-10'>
             <iframe
               className="aspect-video w-full rounded-lg shadow-lg"
               src="https://www.youtube.com/embed/rBpWv5WqSds"

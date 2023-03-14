@@ -60,7 +60,7 @@ const gallery = [
 
 const images = [
   {
-    src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(1).png',
+    src: 'https://raw.githubusercontent.com/githubhosting/shanthaveri-gopalagowda/main/src/images/gallery_img/gallery%20(1).png',
     original: { img1 },
     width: 375,
     height: 480,
@@ -188,20 +188,19 @@ const images = [
     caption: 'SGG with Smt. Indira Gandhi and ???',
   },
   {
-    src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(17).png',
+    src: 'https://raw.githubusercontent.com/githubhosting/shanthaveri-gopalagowda/main/src/images/gallery_img/gallery%20(17).png',
     original: { img17 },
     width: 1200,
     height: 821,
     caption: '....',
   },
   {
-    src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(18).png',
+    src: 'https://raw.githubusercontent.com/githubhosting/shanthaveri-gopalagowda/main/src/images/gallery_img/gallery%20(18).png',
     original: { img18 },
     width: 300,
     height: 175,
     caption: '...',
   },
-
 ]
 function GalleryNew() {
   const [index, setIndex] = useState(-1)
