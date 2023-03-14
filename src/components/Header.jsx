@@ -206,7 +206,7 @@ function ModeToggle() {
       className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-sky-50 [@media(prefers-color-scheme:dark)]:stroke-sky-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-sky-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-sky-600" />
+      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-sky-50 [@media(prefers-color-scheme:dark)]:stroke-insp-200 [@media(prefers-color-scheme:dark)]:group-hover:fill-sky-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-sky-600" />
       <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-sky-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-sky-500" />
     </button>
   )
@@ -259,7 +259,7 @@ function Homebutton() {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="h-6 w-6 dark:stroke-slate-50 stroke-black"
+      className="h-6 w-6 stroke-black dark:stroke-slate-50"
     >
       <path
         strokeLinecap="round"
@@ -282,32 +282,21 @@ function LanguageToggle() {
   let isEnglishDefault = defaultLocale === 'en'
 
   let language = isEnglish ? 'English' : 'Kannaga'
-  let languageIcon = isEnglish ? 'EN' : 'KA'
+  let languageIcon = isEnglish ? 'EN' : 'ಕನ್ನಡ'
 
   let otherLanguage = isEnglish ? 'Kannada' : 'English'
   let otherLanguageIcon = isEnglish ? 'KA' : 'EN'
 
-  let toggleRef = useRef()
-
-  let handleToggleClick = () => {
-    setIsOpen((isOpen) => !isOpen)
-  }
-
   return (
     <div className="relative">
-      <button
-        ref={toggleRef}
-        type="button"
-        aria-haspopup="listbox"
-        aria-expanded={isOpen}
-        aria-label="Toggle language"
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
-        onClick={handleToggleClick}
+      <div
+        // type="button"
+        className="flex h-10 w-10 items-center justify-center"
       >
         <span className="text-md font-medium dark:text-white">
           {languageIcon}
         </span>
-      </button>
+      </div>
     </div>
   )
 }
@@ -436,16 +425,25 @@ export function Header() {
             <div className="relative flex gap-4">
               <div className="flex flex-1">
                 {isHomePage && (
-                  <div>
-                    <div className="flex justify-center">
+                  <>
+                    <Link
+                      href="http://shanthaverigopalagowda.in/"
+                      target="_blank"
+                      className="pointer-events-auto bg-sky-50 px-2 rounded-md shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
+                    >
                       <LanguageToggle />
-                    </div>
-                  </div>
+                    </Link>
+                    {/* <div className="pointer-events-auto">
+                      <div className="flex justify-center">
+                        <LanguageToggle />
+                      </div>
+                    </div> */}
+                  </>
                 )}
                 {!isHomePage && (
                   <Link
                     href="/"
-                    className="ring-zinc-900/5backdrop-blur dark:shadow-5xl pointer-events-auto mr-5 flex items-center justify-center rounded-full bg-white/90 p-2 align-middle shadow-lg shadow-zinc-800/5 ring-1 dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+                    className="dark:shadow-5xl pointer-events-auto mr-5 flex items-center justify-center rounded-full bg-white/90 p-2 align-middle shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
                   >
                     <Homebutton />
                   </Link>

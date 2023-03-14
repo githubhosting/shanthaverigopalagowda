@@ -89,7 +89,7 @@ function Debate() {
             <div className="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
               <button
                 onClick={onButtonClick}
-                className="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
+                className="flex w-full transform items-center justify-center rounded-md bg-sky-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-sky-500 focus:bg-sky-500 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
               >
                 <DownloadIcon />
                 <span className="mx-1">Download</span>
@@ -98,7 +98,7 @@ function Debate() {
                 href="#"
                 target="_blank"
                 rel="noreferrer"
-                className="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
+                className="flex w-full transform items-center justify-center rounded-md bg-sky-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-sky-500 focus:bg-sky-500 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
               >
                 <ViewIcon />
                 <span className="mx-1">View</span>
@@ -117,7 +117,7 @@ function Debate() {
             <div className="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
               <button
                 onClick={onButtonClick2}
-                className="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
+                className="flex w-full transform items-center justify-center rounded-md bg-sky-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-sky-500 focus:bg-sky-500 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
               >
                 <DownloadIcon />
                 <span className="mx-1">Download</span>
@@ -127,7 +127,7 @@ function Debate() {
                 href="#"
                 target="_blank"
                 rel="noreferrer"
-                className="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
+                className="flex w-full transform items-center justify-center rounded-md bg-sky-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-sky-500 focus:bg-sky-500 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
               >
                 <ViewIcon />
                 <span className="mx-1">View</span>
@@ -167,7 +167,7 @@ export default function Media() {
               allowFullScreen
             ></iframe>
           </div>
-          <div className='mt-10'>
+          <div className="mt-10">
             <iframe
               className="aspect-video w-full rounded-lg shadow-lg"
               src="https://www.youtube.com/embed/rBpWv5WqSds"

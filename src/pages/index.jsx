@@ -268,7 +268,7 @@ function Timeline() {
               </p>
             </div>
             <div className="mt-0.5 ml-4 mb-6">
-              <h4 className="mb-1.5 text-lg lg:text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+              <h4 className="mb-1.5 text-lg font-semibold text-zinc-800 dark:text-zinc-100 lg:text-xl">
                 {item.title}
               </h4>
               <p className="mb-3 text-gray-500">{item.description}</p>
@@ -276,6 +276,47 @@ function Timeline() {
           </li>
         ))}
       </ol>
+    </>
+  )
+}
+
+const event = [
+  'On 14th March 2022, the Birth Centenary Commemoration Program was inaugurated. In the Centenary year of 2023, programs related to the Centenary Celebration would be organized across all prominent District Headquarters of the State.',
+  'Around 100 People that include Elders of his era, and contemporaries who have known and interacted with Shri Shanthaveri Gopala Gowda closely will be met, and interviewed and these video clippings and sound bytes would be recorded.',
+  'A Short Documentary Film of about 5 to 10 minutes in duration showing various pictures of his hometown, his life, and times would be produced.',
+  'A Small Handbook with about 60 paragraphs would be published and at least 10,000 copies would be printed.',
+  'This Handbook would be translated into English and 10,000 copies of the same would be printed.',
+  'In about 50 to 100 colleges and universities in the State, about 10,000 students would be addressed to create awareness, the Documentary Film made would be screened, each of them would be given a handbook, also through speeches, information about him, his principles and details about his legacy would be given.',
+  'There are about 15 books published in Kannada about Shri Shanthaveri Gopala Gowda. Out of this one of the books would be translated into both English and Hindi and published.',
+  'Various Details about Shri Shanthaveri Gopala Gowda, about his life, Details about all the programs relating to the commemoration of his Birth Centenary, various articles published in Daily Newspapers, various Audio Snippets made, YouTube Videos, his various images, the images of various letters, speeches given in the assembly, all of this information would be available in one single website created for this purpose.',
+  'Just like on the website, even on other social media sites such as YouTube, Instagram, Facebook, WhatsApp, and other similar platforms, one-minute videos, audio, and text that one can read and hear would be produced and uploaded.',
+  'These audio snippets would be played regularly on various radio channels for a period of 1 year.',
+  'On 14th March 2023, a Public Event would be held to commemorate the Centenary Year of the Late Shri Shanthaveri Gopala Gowda on which an issue of…………… would be released.',
+  'The Postal Department would be reached out to and a postal letter, a postal envelope bearing his image would be released in commemoration of the centenary year.',
+  'A request would be made to the Govt. of Karnataka to install a statue of Late Shri. Gopala Gowda Shantaveri in front of Vidhana Soudha.',
+  'Various such programs and initiatives would be undertaken throughout the coming year and the Centenary Birth Year of Shri Shanthaveri Gopala Gowda would be celebrated in a meaningful manner.',
+]
+
+function Events() {
+  return (
+    <>
+      <h1 className="mb-6 border-t pt-4 text-2xl font-bold tracking-tight text-insp-200 dark:border-zinc-700 dark:text-zinc-100 sm:text-3xl">
+        Events
+      </h1>
+      <div className="lg:pr-20">
+        <div className="pr-2.5 sm:pr-6">
+          <h2 className="mb-4 text-lg font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">
+            Details of Various Events Lined Up in this Birth Centenaray
+            commemoration year
+          </h2>
+          <ul className="list-none md:list-disc">
+            {event.map((item) => (
+              // eslint-disable-next-line react/jsx-key
+              <li className="mb-3 text-zinc-800 dark:text-gray-400">{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </>
   )
 }
@@ -408,6 +449,7 @@ export default function Home({ articles }) {
       <Container className="mt-6 md:mt-7">
         <Poem />
         <Timeline />
+        <Events />
       </Container>
     </>
   )
