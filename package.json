@@ -30,7 +30,9 @@
   "devDependencies": {
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.5",
+    "lightgallery": "^2.7.1",
     "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.11"
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "react-images-viewer": "^1.7.1"
   }
 }

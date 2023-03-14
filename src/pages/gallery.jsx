@@ -4,6 +4,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
 
+import React from 'react'
+import ImgsViewer from 'react-images-viewer'
+
 import { Container } from '@/components/Container'
 import {
   TwitterIcon,
@@ -47,6 +50,20 @@ const gallery = [
   'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(15).png',
   'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(16).png',
 ]
+function GalleryNew() {
+  return (
+    <ImgsViewer
+      imgs={[
+        {
+          src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(1).png',
+        },
+        {
+          src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(2).png',
+        },
+      ]}
+    />
+  )
+}
 
 export default function Gallery() {
   return (
@@ -59,6 +76,7 @@ export default function Gallery() {
         />
       </Head>
       <Container className="mt-16 sm:mt-32">
+        <GalleryNew />
         <section className="overflow-hidden text-gray-700 ">
           <div className="container mx-auto px-5 py-2 lg:px-12 lg:pt-12">
             <div className="-m-1 flex flex-wrap md:-m-2">
