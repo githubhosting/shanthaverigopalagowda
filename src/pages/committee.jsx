@@ -10,6 +10,9 @@ import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import { Container } from '@/components/Container'
 
+import img1 from '@/images/photos/Ramamanohar.png'
+import img2 from '@/images/photos/Araga_Jnanendra.png'
+
 const projects = [
   {
     name: 'Planetaria',
@@ -84,6 +87,57 @@ const members = [
     designation: 'Thirthahalli',
   },
 ]
+const officebearers = [
+  {
+    name: 'Sri. M.G. Mani Hegde',
+  },
+  {
+    name: 'Sri. K.T. Nagaraju',
+  },
+  {
+    name: 'Sri. Madan',
+  },
+  {
+    name: 'Sri. K.P. Manjappa',
+  },
+  {
+    name: 'Sri. P.C. Rajanna',
+  },
+  {
+    name: 'Sri. H.M. Umesh',
+  },
+  {
+    name: 'Sri. Subbaiah Nanturu',
+  },
+  {
+    name: 'Sri. Arun Hosakoppa',
+  },
+  {
+    name: 'Sri. Manamalaiah Ilimane',
+  },
+  {
+    name: 'Smt. Ila Geeta Shanthaveri',
+  },
+  {
+    name: 'Smt. Asha Hegde M.M.',
+  },
+]
+const workingmembers = [
+  {
+    name: 'Sri. Araga Jnanendra',
+    designation: 'President',
+    img: img2,
+  },
+  {
+    name: 'Sri. G.A. Purushotham Gowda',
+    designation: 'Vice President',
+  },
+  {
+    name: 'Sri. Ram Manohar Shanthaveri',
+    designation: 'Secretary',
+    img: img1,
+  },
+]
 
 export default function Committee() {
   return (
@@ -95,16 +149,15 @@ export default function Committee() {
       <Container>
         <div className="container mx-auto px-5 py-12">
           <div className="mb-5 flex w-full flex-col text-center">
-            <h1 className="title-font mb-4 text-2xl font-medium text-gray-900 dark:text-white sm:text-3xl">
-              Advisory{' '}
-              <span className="text-insp-300 dark:text-white">Committee</span>
+            <h1 className="title-font text-2xl font-medium text-gray-900 dark:text-white sm:text-3xl">
+              Advisory Committee
             </h1>
           </div>
           <div className="-m-2 flex flex-wrap justify-center">
             {members.map((member) => (
               // eslint-disable-next-line react/jsx-key
               <div className="w-full p-2 md:w-1/2 lg:w-1/3">
-                <div className="flex h-full items-center rounded-lg border border-gray-200 p-4 shadow-md">
+                <div className="flex h-full items-center rounded-lg border p-4 shadow-md dark:border-gray-600">
                   <div className="flex-grow">
                     <h2 className="title-font font-semibold text-gray-900 dark:text-white">
                       {member.name}
@@ -117,38 +170,50 @@ export default function Committee() {
               </div>
             ))}
           </div>
+          <div className="mt-10 flex w-full flex-col text-center">
+            <h1 className="title-font mb-4 text-2xl font-medium text-gray-900 dark:text-white sm:text-3xl">
+              Working Committee
+            </h1>
+          </div>
+          <div className="-m-2 flex flex-wrap justify-center">
+            {workingmembers.map((workingmember) => (
+              // eslint-disable-next-line react/jsx-key
+              <div className="w-full p-2 md:w-1/2 lg:w-1/3">
+                <div className="flex h-full items-center rounded-lg border p-4 shadow-md dark:border-gray-600 dark:bg-zinc-800/90">
+                  <Image
+                    alt="..."
+                    class="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
+                    src={workingmember.img}
+                    height={64}
+                    width={64}
+                  />
+                  <div className="flex-grow">
+                    <h2 className="title-font font-semibold text-gray-900 dark:text-zinc-100">
+                      {workingmember.name}
+                    </h2>
+                    <p className="text-gray-500 dark:text-white/70">
+                      {workingmember.designation}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <h1 className="title-font mb-4 text-center text-2xl font-medium text-gray-900 dark:text-white sm:text-3xl">
+          Office Bearers
+        </h1>
+        <div className="-mx-2 flex flex-wrap sm:mx-auto sm:mb-2 lg:w-4/5">
+          {officebearers.map((member) => (
+            // eslint-disable-next-line react/jsx-key
+            <div className="w-full p-2 sm:w-1/2">
+              <div className="flex h-full items-center rounded bg-gray-100 p-2 shadow-sm dark:bg-zinc-800/90 dark:text-zinc-100">
+                <span className="title-font font-medium">{member.name}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </Container>
-      {/* <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
-      >
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {projects.map((project) => (
-            <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                <Image
-                  src={project.logo}
-                  alt=""
-                  className="h-8 w-8"
-                  unoptimized
-                />
-              </div>
-              <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
-              </h2>
-              <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-                <LinkIcon className="h-6 w-6 flex-none" />
-                <span className="ml-2">{project.link.label}</span>
-              </p>
-            </Card>
-          ))}
-        </ul>
-      </SimpleLayout> */}
     </>
   )
 }
