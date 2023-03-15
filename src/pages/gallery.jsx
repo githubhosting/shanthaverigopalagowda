@@ -232,7 +232,6 @@ function GalleryNew() {
         /* @ts-ignore */
         <Lightbox
           mainSrc={currentImage.original}
-          enableZoom={false}
           animationDuration={500}
           imageCaption={currentImage.caption}
           mainSrcThumbnail={currentImage.src}
