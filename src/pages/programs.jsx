@@ -23,7 +23,7 @@ import event2_8 from '@/images/events/2 (8).jpeg'
 import event2_9 from '@/images/events/2 (9).jpeg'
 import event2_10 from '@/images/events/2 (10).jpeg'
 import event3_1 from '@/images/events/3 (1).jpg'
-import event3_2 from '@/images/events/3 (2).JPG'
+import event3_2 from '@/images/events/3 (2).jpg'
 import event3_3 from '@/images/events/3 (3).jpg'
 import event3_4 from '@/images/events/3 (4).jpg'
 import event3_5 from '@/images/events/3 (5).jpg'
@@ -123,7 +123,10 @@ export default function Programs() {
         </h1>
         <ul className="space-y-4">
           {events.map((event) => (
-            <li key={event.title} className="neumorphism mb-10 rounded-2xl p-5 border border-zinc-600">
+            <li
+              key={event.title}
+              className="neumorphism mb-10 rounded-2xl border border-zinc-600 p-5"
+            >
               <h3 className="text-center text-lg font-semibold text-gray-900 dark:text-zinc-100">
                 {event.title}
               </h3>
