@@ -17,7 +17,10 @@ function ChevronRightIcon(props) {
 export function Card({ as: Component = 'div', className, children }) {
   return (
     <Component
-      className={clsx(className, 'group relative flex flex-col items-start')}
+      className={clsx(
+        className,
+        'group relative flex flex-col items-start p-2'
+      )}
     >
       {children}
     </Component>
@@ -27,9 +30,9 @@ export function Card({ as: Component = 'div', className, children }) {
 Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
-      <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50  sm:-inset-x-6 sm:rounded-2xl" />
+      <div className="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-zinc-50 opacity-0 transition dark:bg-zinc-800/50 sm:-inset-x-3 sm:rounded-2xl" />
       <Link {...props}>
-        <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl dark:bg-gray-800/50 bg-slate-50/2 shadow-md" />
+        <span className="bg-slate-50/2 absolute -inset-y-3 -inset-x-2 z-20 rounded-xl shadow-md group-hover:scale-100 group-hover:opacity-100 border dark:border-slate-100 border-gray-100 sm:-inset-x-4 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
       </Link>
     </>
@@ -38,7 +41,7 @@ Card.Link = function CardLink({ children, ...props }) {
 
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   return (
-    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+    <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-white">
       {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
@@ -75,7 +78,7 @@ Card.Eyebrow = function CardEyebrow({
     <Component
       className={clsx(
         className,
-        'relative z-10 order-first mb-3 flex items-center text-sm font-semibold text-zinc-400 dark:text-zinc-200',
+        'relative z-10 order-first mb-3 flex items-center text-sm font-semibold text-zinc-800 dark:text-zinc-200',
         decorate && 'pl-3.5'
       )}
       {...props}

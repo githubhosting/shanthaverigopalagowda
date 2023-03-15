@@ -125,7 +125,7 @@ export default function Programs() {
           {events.map((event) => (
             <li
               key={event.title}
-              className="dark:neumorphism mb-10 rounded-2xl border border-slate-100 p-5 dark:border-zinc-600 shadow-lg"
+              className="dark:neumorphism mb-10 rounded-2xl border border-slate-100 p-5 shadow-lg dark:border-zinc-600"
             >
               <h3 className="text-center text-lg font-semibold text-gray-900 dark:text-zinc-100">
                 {event.title}
