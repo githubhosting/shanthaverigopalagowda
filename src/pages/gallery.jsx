@@ -178,27 +178,28 @@ const images = [
     original: { img15 },
     width: 2560,
     height: 1811,
-    caption: 'SGG with ???',
+    caption: 'SGG with Smt. Indira Gandhi and ???',
   },
   {
     src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(16).png',
     original: { img16 },
     width: 2560,
     height: 1742,
-    caption: 'SGG with Smt. Indira Gandhi and ???',
+    caption: 'SGG with ???',
   },
   {
     src: 'https://raw.githubusercontent.com/githubhosting/shanthaveri-gopalagowda/main/src/images/gallery_img/gallery%20(17).png',
     original: { img17 },
     width: 1200,
     height: 821,
-    caption: '....',
+    caption:
+      'Ramamanohar Lohia interacts with S Gopala Gowda in Bangalore in 1963',
   },
   {
     src: 'https://raw.githubusercontent.com/githubhosting/shanthaveri-gopalagowda/main/src/images/gallery_img/gallery%20(18).png',
     original: { img18 },
-    width: 300,
-    height: 175,
+    width: 1200,
+    height: 1131,
     caption: '...',
   },
 ]
