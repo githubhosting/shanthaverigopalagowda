@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-import { SimpleLayout } from '@/components/SimpleLayout'
 import { Container } from '@/components/Container'
 
 const letters = [
@@ -11,16 +10,16 @@ const letters = [
   },
 ]
 
-export default function Letters() {
+export default function Quizz() {
   return (
     <>
       <Head>
-        <title>Letters - Shanthaveri Gopala Gowda</title>
-        <meta name="description" content="Letters - Shanthaveri Gopala Gowda" />
+        <title>Quizz - Shanthaveri Gopala Gowda</title>
+        <meta name="description" content="Quizz - Shanthaveri Gopala Gowda" />
       </Head>
       <Container className="mt-8 sm:mt-16">
         <h1 className="pb-10 text-center text-4xl font-bold text-insp2 dark:text-white">
-          Letters
+          Quizz
         </h1>
         <ul className="space-y-4">
           {letters.map((letter) => (

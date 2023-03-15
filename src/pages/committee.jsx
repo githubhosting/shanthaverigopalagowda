@@ -157,7 +157,7 @@ export default function Committee() {
             {members.map((member) => (
               // eslint-disable-next-line react/jsx-key
               <div className="w-full p-2 md:w-1/2 lg:w-1/3">
-                <div className="flex h-full items-center rounded-lg border p-4 shadow-md dark:border-gray-600">
+                <div className="flex h-full items-center rounded-lg border p-4 shadow-md dark:border-gray-600 dark:bg-zinc-800">
                   <div className="flex-grow">
                     <h2 className="title-font font-semibold text-gray-900 dark:text-white">
                       {member.name}
@@ -179,7 +179,7 @@ export default function Committee() {
             {workingmembers.map((workingmember) => (
               // eslint-disable-next-line react/jsx-key
               <div className="w-full p-2 md:w-1/2 lg:w-1/3">
-                <div className="flex h-full items-center rounded-lg border p-4 shadow-md dark:border-gray-600 dark:bg-zinc-800/90">
+                <div className="flex h-full items-center rounded-lg border p-4 shadow-md dark:border-gray-600 dark:bg-zinc-800">
                   <Image
                     alt="..."
                     class="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
@@ -207,7 +207,7 @@ export default function Committee() {
           {officebearers.map((member) => (
             // eslint-disable-next-line react/jsx-key
             <div className="w-full p-2 sm:w-1/2">
-              <div className="flex h-full items-center rounded bg-gray-100 p-2 shadow-sm dark:bg-zinc-800/90 dark:text-zinc-100">
+              <div className="flex h-full items-center rounded bg-gray-100 p-2 pl-4 shadow-sm dark:bg-zinc-800/90 dark:text-zinc-100">
                 <span className="title-font font-medium">{member.name}</span>
               </div>
             </div>

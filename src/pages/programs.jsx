@@ -1,0 +1,150 @@
+/* eslint-disable @next/next/no-img-element */
+import Head from 'next/head'
+import Image from 'next/future/image'
+
+import { Container } from '@/components/Container'
+import event1_1 from '@/images/events/1 (1).jpg'
+import event1_2 from '@/images/events/1 (2).jpg'
+import event1_3 from '@/images/events/1 (3).jpg'
+import event1_4 from '@/images/events/1 (4).jpg'
+import event1_5 from '@/images/events/1 (5).jpg'
+import event1_6 from '@/images/events/1 (6).jpg'
+import event1_7 from '@/images/events/1 (7).jpg'
+import event1_8 from '@/images/events/1 (8).jpg'
+import event1_9 from '@/images/events/1 (9).jpg'
+import event2_1 from '@/images/events/2 (1).jpeg'
+import event2_2 from '@/images/events/2 (2).jpeg'
+import event2_3 from '@/images/events/2 (3).jpeg'
+import event2_4 from '@/images/events/2 (4).jpeg'
+import event2_5 from '@/images/events/2 (5).jpeg'
+import event2_6 from '@/images/events/2 (6).jpeg'
+import event2_7 from '@/images/events/2 (7).jpeg'
+import event2_8 from '@/images/events/2 (8).jpeg'
+import event2_9 from '@/images/events/2 (9).jpeg'
+import event2_10 from '@/images/events/2 (10).jpeg'
+import event3_1 from '@/images/events/3 (1).jpg'
+import event3_2 from '@/images/events/3 (2).JPG'
+import event3_3 from '@/images/events/3 (3).jpg'
+import event3_4 from '@/images/events/3 (4).jpg'
+import event3_5 from '@/images/events/3 (5).jpg'
+import event3_6 from '@/images/events/3 (6).jpg'
+import event3_7 from '@/images/events/3 (7).jpg'
+import event3_8 from '@/images/events/3 (8).jpg'
+import event3_9 from '@/images/events/3 (9).jpg'
+import event3_10 from '@/images/events/3 (10).jpg'
+import event4 from '@/images/events/4.jpeg'
+import event5 from '@/images/events/5.jpeg'
+
+const events = [
+  {
+    id: 1,
+    title:
+      'Inauguration of Sri. Shanthaveri Gopala Gowda’s Centenary Celebrations, Gopala Gowda Circle. ',
+    date: '14th March 2023',
+    description: 'cvmh',
+    images: [
+      event1_1,
+      event1_2,
+      event1_3,
+      event1_4,
+      event1_5,
+      event1_6,
+      event1_7,
+      event1_8,
+      event1_9,
+    ],
+  },
+  {
+    id: 2,
+    title: 'District Programs, Bhadravathi, Chunchadri Women’s Association',
+    date: '26th November 2022 ',
+    description: 'cvmh',
+    images: [
+      event2_1,
+      event2_2,
+      event2_3,
+      event2_4,
+      event2_5,
+      event2_6,
+      event2_7,
+      event2_8,
+      event2_9,
+      event2_10,
+    ],
+  },
+  {
+    id: 3,
+    title:
+      'District Programs, Dharwad, Patil Puttappa Bhavan, Karnataka Vidyavarthaka Sangha.',
+    date: '8th December 2022',
+    description: 'cvmh',
+    images: [
+      event3_1,
+      event3_2,
+      event3_3,
+      event3_4,
+      event3_5,
+      event3_6,
+      event3_7,
+      event3_8,
+      event3_9,
+      event3_10,
+    ],
+  },
+  {
+    id: 4,
+    title: 'District Programs, Sahyadri College, Shimoga',
+    date: '14th December 2022',
+    description: 'cvmh',
+    images: [event4],
+  },
+  {
+    id: 5,
+    title: 'District Progrms, Saidooru',
+    date: '28th December 2022',
+    description: 'cvmh',
+    images: [event5],
+  },
+]
+
+export default function Programs() {
+  return (
+    <>
+      <Head>
+        <title>Events - Shanthaveri Gopala Gowda</title>
+        <meta
+          name="description"
+          content="Programs and Events - Shanthaveri Gopala Gowda"
+        />
+      </Head>
+      <Container className="mt-8 sm:mt-16">
+        <h1 className="pb-10 text-center text-4xl font-bold text-insp2 dark:text-white">
+          Events
+        </h1>
+        <ul className="space-y-4">
+          {events.map((event) => (
+            <li key={event.title} className="neumorphism mb-10 rounded-2xl p-5 border border-zinc-600">
+              <h3 className="text-center text-lg font-semibold text-gray-900 dark:text-zinc-100">
+                {event.title}
+              </h3>
+              <p className="mt-2 text-center text-gray-700 dark:text-zinc-100/50">
+                {event.date}
+              </p>
+
+              <div className="mt-4 flex flex-wrap justify-center gap-3">
+                {event.images.map((image) => (
+                  <Image
+                    key={image}
+                    className="w-1/2 rounded-md object-contain sm:w-1/3 xl:w-1/6"
+                    src={image}
+                    alt={event.title}
+                  />
+                ))}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </>
+  )
+}
