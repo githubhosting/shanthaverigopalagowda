@@ -122,7 +122,12 @@ const images = [
     original: { img7 },
     width: 1809,
     height: 2560,
-    caption: 'SGG as a Youth Leader',
+    caption: 'S Gopala Gowda as a Youth Leader',
+    customOverlay: (
+      <div className="custom-overlay__caption">
+        <div>S Gopala Gowda as a Youth Leader</div>
+      </div>
+    ),
   },
   {
     src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(8).png',
@@ -157,7 +162,8 @@ const images = [
     original: { img12 },
     width: 1809,
     height: 2560,
-    caption: 'Family Pic - SGG, Wife and children - Ila Geeta and Ramamanohar',
+    caption:
+      'Family Picture - SGG, Wife and children - Ila Geeta and Ramamanohar',
   },
   {
     src: 'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(13).png',
@@ -200,7 +206,7 @@ const images = [
     original: { img18 },
     width: 1200,
     height: 1131,
-    caption: '...',
+    caption: 'S Gopala Gowda with Wife, Smt. Sonakka',
   },
 ]
 function GalleryNew() {
