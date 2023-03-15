@@ -264,6 +264,10 @@ export default function Gallery_() {
           name="description"
           content="Gallery - Shri Shantaveri Gopala Gowda"
         />
+        <meta
+          name="keywords"
+          content="Shantaveri Gopala Gowda, Shantaveri Gopala Gowda Centenary, Shantaveri Gopala Gowda Centenary Tribute, Shantaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
+        />
       </Head>
       <Container className="mt-8 sm:mt-16">
         <h1 className="pb-10 text-center text-4xl font-bold text-insp2 dark:text-white">

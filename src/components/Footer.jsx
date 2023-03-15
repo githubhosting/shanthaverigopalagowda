@@ -45,6 +45,15 @@ function socialDiv() {
   )
 }
 
+function PageViews() {
+  return (
+    //page views count
+    <p className="mt-5 text-center text-sm text-zinc-400 dark:text-zinc-500">
+      Currently this page has been viewed .... times.
+    </p>
+  )
+}
+
 export function Footer() {
   return (
     <footer className="mt-32">
@@ -52,11 +61,13 @@ export function Footer() {
         <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
           <Container.Inner>
             <div className="items-left flex flex-col justify-between gap-6 sm:flex-row">
-              <div className="flex flex-col gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200 md:flex-row">
+              <div className="flex flex-col gap-2 text-sm font-medium text-zinc-800 dark:text-zinc-200 md:flex-row">
                 <NavLink href="/committee">Centenary Committee</NavLink>
                 <NavLink href="/programs">Programs</NavLink>
                 <NavLink href="/gallery">Gallery</NavLink>
                 <NavLink href="/letters">Letters</NavLink>
+                <NavLink href="/books">Books</NavLink>
+                <NavLink href="/quizz">Quizz</NavLink>
                 <NavLink href="/media">Media</NavLink>
                 <NavLink href="/contactus">Contact Us</NavLink>
               </div>
@@ -83,14 +94,24 @@ export function Footer() {
                   icon={YouTubeIcon}
                 />
               </div>
-              {/* <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Shanthaveri Gopala Gowda. All
-                rights reserved.
-              </p> */}
             </div>
+            <p className="mt-5 text-center text-sm text-zinc-400 dark:text-zinc-500">
+              &copy; {new Date().getFullYear()} Shanthaveri Gopala Gowda. All
+              rights reserved.
+            </p>
+            <PageViews />
           </Container.Inner>
         </div>
       </Container.Outer>
     </footer>
   )
 }
+
+//  add page view count
+
+// function PageViews() {
+//   const { data } = useSWR('/api/page-views', fetcher)
+//   const views = new Number(data?.total)
+
+//   return <>{views > 0 ? views.toLocaleString() : '–––'}</>
+// }

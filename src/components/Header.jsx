@@ -123,11 +123,13 @@ function MobileNavigation(props) {
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 <MobileNavItem href="/committee">
-                  Centenary Commemoration Committee
+                  Centenary Committee
                 </MobileNavItem>
                 <MobileNavItem href="/programs">Programs</MobileNavItem>
                 <MobileNavItem href="/gallery">Gallery</MobileNavItem>
                 <MobileNavItem href="/letters">Letters</MobileNavItem>
+                <MobileNavItem href="/books">Books</MobileNavItem>
+                <MobileNavItem href="/quizz">Quizz</MobileNavItem>
                 <MobileNavItem href="/media">Media</MobileNavItem>
                 <MobileNavItem href="/contactus">Contact Us</MobileNavItem>
               </ul>
@@ -170,6 +172,8 @@ function DesktopNavigation(props) {
         <NavItem href="/programs">Programs</NavItem>
         <NavItem href="/gallery">Gallery</NavItem>
         <NavItem href="/letters">Letters</NavItem>
+        <NavItem href="/books">Books</NavItem>
+        <NavItem href="/quizz">Quizz</NavItem>
         <NavItem href="/media">Media</NavItem>
         <NavItem href="/contactus">Contact Us</NavItem>
       </ul>
@@ -429,7 +433,7 @@ export function Header() {
                     <Link
                       href="http://shanthaverigopalagowda.in/"
                       target="_blank"
-                      className="pointer-events-auto bg-sky-50 px-2 rounded-md shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
+                      className="pointer-events-auto rounded-md bg-sky-50 px-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
                     >
                       <LanguageToggle />
                     </Link>

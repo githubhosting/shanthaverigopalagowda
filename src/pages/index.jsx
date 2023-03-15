@@ -330,6 +330,10 @@ export default function Home({ articles }) {
           name="description"
           content="Explore the life and legacy of Shantaveri Gopala Gowda, one of Karnataka's most prominent socialist leaders. Learn about his early involvement in the freedom movement, his introduction to socialism and his role in shaping the political landscape of the state. Discover his contributions to the 'Land for the Tiller' movement and his stance on the unification of Karnataka. A centenary tribute website"
         />
+        <meta
+          name="keywords"
+          content="Shantaveri Gopala Gowda, Shantaveri Gopala Gowda Centenary, Shantaveri Gopala Gowda Centenary Tribute, Shantaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
+        />
       </Head>
       <Container className="mt-8 sm:mt-12">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -468,3 +472,23 @@ export async function getStaticProps() {
     },
   }
 }
+
+//add a page view counter
+
+// import { useState, useEffect } from 'react'
+
+// function usePageViews() {
+//   const [pageViews, setPageViews] = useState(0)
+
+//   useEffect(() => {
+//     const fetchPageViews = async () => {
+//       const res = await fetch('/api/page-views')
+//       const json = await res.json()
+//       setPageViews(json.pageViews)
+//     }
+
+//     fetchPageViews()
+//   }, [])
+
+//   return pageViews
+// }

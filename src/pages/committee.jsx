@@ -145,6 +145,10 @@ export default function Committee() {
       <Head>
         <title>Centenary Commemoration Committee</title>
         <meta name="description" content="Centenary Commemoration Committee" />
+        <meta
+          name="keywords"
+          content="Shantaveri Gopala Gowda, Shantaveri Gopala Gowda Centenary, Shantaveri Gopala Gowda Centenary Tribute, Shantaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
+        />
       </Head>
       <Container>
         <div className="container mx-auto px-5 py-12">
