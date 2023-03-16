@@ -48,7 +48,7 @@ function socialDiv() {
 function PageViews() {
   return (
     //page views count
-    <p className="mt-5 text-center text-sm text-zinc-400 dark:text-zinc-500">
+    <p className="mt-5 text-center text-sm text-zinc-600 dark:text-zinc-300">
       Currently this page has been viewed .... times.
     </p>
   )
@@ -95,7 +95,7 @@ export function Footer() {
                 />
               </div>
             </div>
-            <p className="mt-5 text-center text-sm text-zinc-400 dark:text-zinc-500">
+            <p className="mt-5 text-center text-sm text-zinc-600 dark:text-zinc-300">
               &copy; {new Date().getFullYear()} Shanthaveri Gopala Gowda. All
               rights reserved.
             </p>

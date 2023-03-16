@@ -111,7 +111,7 @@ function Poem() {
                   </p>
                 </div>
                 <footer className="mt-6">
-                  <p className="text-base font-medium text-white">
+                  <p className="text-base font-medium text-zinc-800 dark:text-zinc-100">
                     - Giridhari
                   </p>
                 </footer>
@@ -263,15 +263,17 @@ function Timeline() {
           <li>
             <div className="flex-start flex items-center pt-3">
               <div className="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
-              <p className="text-sm font-semibold text-gray-600 dark:text-white">
+              <h3 className="text-sm font-semibold text-gray-600 dark:text-white">
                 {item.date}
-              </p>
+              </h3>
             </div>
             <div className="mt-0.5 ml-4 mb-6">
               <h4 className="mb-1.5 text-lg font-semibold text-zinc-800 dark:text-zinc-100 lg:text-xl">
                 {item.title}
               </h4>
-              <p className="mb-3 text-gray-500">{item.description}</p>
+              <p className="mb-3 text-justify text-gray-600 dark:text-zinc-400">
+                {item.description}
+              </p>
             </div>
           </li>
         ))}
@@ -312,7 +314,7 @@ function Events() {
           <ul className="list-none md:list-disc">
             {event.map((item) => (
               // eslint-disable-next-line react/jsx-key
-              <li className="mb-3 text-zinc-800 dark:text-gray-400">{item}</li>
+              <li className="mb-3 text-zinc-800 dark:text-gray-400 text-justify">{item}</li>
             ))}
           </ul>
         </div>
@@ -369,7 +371,7 @@ export default function Home({ articles }) {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Shanthaveri Gopala Gowda
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 text-justify text-base text-zinc-700 dark:text-zinc-400">
               <p>
                 Welcome to the official website dedicated to the life and legacy
                 of Sri. Shanthaveri Gopal Gowda, a pioneer of socialism in
@@ -457,7 +459,7 @@ export default function Home({ articles }) {
           </div>
         </div>
         <div className="mt-10 flex items-center justify-center rounded-xl bg-slate-50 p-5 shadow-md dark:bg-gray-800 dark:text-white">
-          <h2 className="text-center font-bold italic">
+          <h2 className="text-justify font-bold italic">
             Please join us as we commemorate his centenary birth year and
             celebrate his enduring legacy.
           </h2>

@@ -86,7 +86,7 @@ export default function About() {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Shanthaveri Gopala Gowda
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 text-justify text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 A Firebrand politician who understood the culture of the land
                 being a villager himself had a great following amongst the
@@ -141,7 +141,11 @@ export default function About() {
               <SocialLinks href="#" icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
               </SocialLinks>
-              <SocialLinks href="https://www.youtube.com/@shanthaveri" icon={YouTubeIcon} className="mt-4">
+              <SocialLinks
+                href="https://www.youtube.com/@shanthaveri"
+                icon={YouTubeIcon}
+                className="mt-4"
+              >
                 Subscribe on YouTube
               </SocialLinks>
               <SocialLinks
