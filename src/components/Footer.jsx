@@ -89,7 +89,7 @@ export function Footer() {
                   icon={InstagramIcon}
                 />
                 <SocialLink
-                  href="https://youtube.com"
+                  href="https://www.youtube.com/@shanthaveri"
                   aria-label="Follow on Facebook"
                   icon={YouTubeIcon}
                 />

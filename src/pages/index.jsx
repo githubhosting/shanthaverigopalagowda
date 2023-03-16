@@ -334,6 +334,24 @@ export default function Home({ articles }) {
           name="keywords"
           content="Shantaveri Gopala Gowda, Shantaveri Gopala Gowda Centenary, Shantaveri Gopala Gowda Centenary Tribute, Shantaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
         />
+        <meta
+          name="author"
+          content="Shantaveri Gopala Gowda Centenary Tribute"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="1 days" />
+        <meta name="distribution" content="web" />
+        <meta name="rating" content="general" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="Shantaveri Gopala Gowda"
+        />
+        <meta
+          name="google-site-verification"
+          content="9l6jBCdCjl0ZW1Q6RrsllF3h9y5WdO-_rNvO1BKgH9s"
+        />
       </Head>
       <Container className="mt-8 sm:mt-12">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -414,7 +432,11 @@ export default function Home({ articles }) {
               <SocialLinks href="#" icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
               </SocialLinks>
-              <SocialLinks href="#" icon={YouTubeIcon} className="mt-4">
+              <SocialLinks
+                href="https://www.youtube.com/@shanthaveri"
+                icon={YouTubeIcon}
+                className="mt-4"
+              >
                 Subscribe on YouTube
               </SocialLinks>
               <SocialLinks

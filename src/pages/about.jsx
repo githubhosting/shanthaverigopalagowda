@@ -141,7 +141,7 @@ export default function About() {
               <SocialLinks href="#" icon={InstagramIcon} className="mt-4">
                 Follow on Instagram
               </SocialLinks>
-              <SocialLinks href="#" icon={YouTubeIcon} className="mt-4">
+              <SocialLinks href="https://www.youtube.com/@shanthaveri" icon={YouTubeIcon} className="mt-4">
                 Subscribe on YouTube
               </SocialLinks>
               <SocialLinks
