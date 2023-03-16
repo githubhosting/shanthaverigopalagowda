@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'Malige';
   src: url('../public/fonts/Malige.ttf');
+  font-display: swap;
 }
 
 .custom-overlay__caption {

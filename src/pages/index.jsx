@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Image from 'next/future/image'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -19,6 +18,7 @@ import {
 import portraitImage from '@/images/potrait.png'
 import portraitImage2 from '@/images/shanthaverigopalagowda.png'
 import circleImage from '@/images/ShanthaveriGopalaGowdaCircle.png'
+import youngSGG from '@/images/youngShanthaverigopalagowda.jpeg'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
@@ -71,10 +71,10 @@ function Poem() {
             />
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0">
               <div className="aspect-w-10 aspect-h-12 sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none overflow-hidden rounded-xl shadow-xl lg:h-full">
-                <img
+                <Image
                   className="object-cover lg:h-full lg:w-full"
-                  src="https://user-images.githubusercontent.com/71520844/213868001-d2e719ce-81b0-49e6-bbfd-392473bc8e86.jpg"
-                  alt=""
+                  src={youngSGG}
+                  alt="young Shanthaveri gopala gowda"
                 />
               </div>
             </div>
@@ -314,7 +314,9 @@ function Events() {
           <ul className="list-none md:list-disc">
             {event.map((item) => (
               // eslint-disable-next-line react/jsx-key
-              <li className="mb-3 text-zinc-800 dark:text-gray-400 text-justify">{item}</li>
+              <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
+                {item}
+              </li>
             ))}
           </ul>
         </div>
@@ -354,6 +356,7 @@ export default function Home({ articles }) {
           name="google-site-verification"
           content="9l6jBCdCjl0ZW1Q6RrsllF3h9y5WdO-_rNvO1BKgH9s"
         />
+        <link rel="preload" href="../public/fonts/Malige.ttf" as="font/ttf" />
       </Head>
       <Container className="mt-8 sm:mt-12">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
