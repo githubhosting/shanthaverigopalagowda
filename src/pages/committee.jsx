@@ -12,6 +12,7 @@ import { Container } from '@/components/Container'
 
 import img1 from '@/images/photos/Ramamanohar.png'
 import img2 from '@/images/photos/Araga_Jnanendra.png'
+import img3 from '@/images/photos/Purushotham.jpg'
 
 const projects = [
   {
@@ -131,6 +132,7 @@ const workingmembers = [
   {
     name: 'Sri. G.A. Purushotham Gowda',
     designation: 'Vice President',
+    img: img3,
   },
   {
     name: 'Sri. Ram Manohar Shanthaveri',
@@ -188,8 +190,8 @@ export default function Committee() {
                     alt="..."
                     class="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
                     src={workingmember.img}
-                    height={64}
-                    width={64}
+                    // height={64}
+                    // width={64}
                   />
                   <div className="flex-grow">
                     <h2 className="title-font font-semibold text-gray-900 dark:text-zinc-100">

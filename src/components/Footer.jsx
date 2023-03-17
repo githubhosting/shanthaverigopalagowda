@@ -61,7 +61,7 @@ export function Footer() {
         <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
           <Container.Inner>
             <div className="items-left flex flex-col justify-between gap-6 sm:flex-row">
-              <div className="flex flex-col gap-2 text-sm font-medium text-zinc-800 dark:text-zinc-200 md:flex-row">
+              <div className="flex flex-col gap-2 text-sm font-medium text-zinc-800 dark:text-zinc-200 md:flex-row md:gap-6">
                 <NavLink href="/committee">Centenary Committee</NavLink>
                 <NavLink href="/programs">Programs</NavLink>
                 <NavLink href="/gallery">Gallery</NavLink>
@@ -95,7 +95,7 @@ export function Footer() {
                 />
               </div>
             </div>
-            <p className="mt-5 text-center text-sm text-zinc-600 dark:text-zinc-300">
+            <p className="mt-6 text-center text-sm text-zinc-600 dark:text-zinc-300">
               &copy; {new Date().getFullYear()} Shanthaveri Gopala Gowda. All
               rights reserved.
             </p>

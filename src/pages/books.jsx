@@ -48,6 +48,7 @@ const books = [
     title: 'Shanthaveri Gopala Gowda',
     author: 'H. M. Nagayya',
     image: book3,
+    imageb: book3b,
   },
   {
     title: 'Jeevantha Jwale',

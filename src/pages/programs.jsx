@@ -93,14 +93,14 @@ const events = [
   },
   {
     id: 4,
-    title: 'District Programs, Sahyadri College, Shimoga',
+    title: 'District Program, Sahyadri College, Shimoga',
     date: '14th December 2022',
     description: 'cvmh',
     images: [event4],
   },
   {
     id: 5,
-    title: 'District Progrms, Saidooru',
+    title: 'District Program, Saidooru',
     date: '28th December 2022',
     description: 'cvmh',
     images: [event5],

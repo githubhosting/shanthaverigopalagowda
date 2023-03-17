@@ -5,7 +5,6 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import React from 'react'
-import ImgsViewer from 'react-images-viewer'
 
 import { useState } from 'react'
 import { Gallery } from 'react-grid-gallery'
@@ -38,6 +37,7 @@ import img15 from '@/images/gallery_img/gallery (15).png'
 import img16 from '@/images/gallery_img/gallery (16).png'
 import img17 from '@/images/gallery_img/gallery (17).png'
 import img18 from '@/images/gallery_img/gallery (18).png'
+import { transparent } from 'tailwindcss/colors'
 
 const gallery = [
   'https://raw.githubusercontent.com/githubhosting/shanthaverigopalagowda/main/src/images/gallery_img/gallery%20(1).png',
@@ -229,6 +229,8 @@ function GalleryNew() {
         images={images}
         onClick={handleClick}
         enableImageSelection={false}
+        margin={6}
+        rowHeight={280}
         thumbnailStyle={{
           borderRadius: '8px',
           boxShadow:

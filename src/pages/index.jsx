@@ -93,7 +93,7 @@ function Poem() {
                   >
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>
-                  <p className="mt-6 font-malige text-base font-semibold tracking-wider text-zinc-800 dark:text-zinc-100">
+                  <p className="mt-6 font-malige text-base font-medium tracking-wider text-zinc-800 dark:text-zinc-100 md:text-xl">
                     ಬಂದೆ ಬಿಟ್ಟನೆ ಶಾರ್ವರಿ<br></br>
                     ಬಡವನ ಈ ಬಾಗಿಲಿಗೂ<br></br>
                     ಬಂದಂತೆ ಹಿಂದೆ ರಾಯಭಾರಿ ವಿದುರನ ಮನೆಗೆ.<br></br>
@@ -131,7 +131,7 @@ const timeline = [
     date: '14 March, 1923',
     title: 'Birth',
     description:
-      'Sri. Shanthaveri Gopala Gowda was born in Shanthaveri a village in Thirthahalli Taluk of Shimoga District into a poor agricultural family to______________ and ____________(father and mother)',
+      'Sri. Shanthaveri Gopala Gowda was born in Shanthaveri a village in Thirthahalli Taluk of Shimoga District into a poor agricultural family to Kolluraiah Gowda and Seshamma.',
   },
   {
     id: 2,
@@ -236,14 +236,14 @@ const timeline = [
     date: '1967',
     title: 'Re-elected as M.L.A',
     description:
-      'Was Reelected as M.L.A. from Thirthahalli Constituency. Daughter, Kum. Ila Geetha was born on ______, 1967at Namma Bengaluru.',
+      'Was Reelected as M.L.A. from Thirthahalli Constituency. Daughter, Kum. Ila Geetha was born in the year 1967 in Bengaluru.',
   },
   {
     id: 17,
     date: '1968',
     title: 'Birth of Son - Ramamanohar',
     description:
-      'Son, Mst. Ramamanohar was born on April 4th 1968 at Namma Bengaluru.',
+      'Son, Mst. Ramamanohar was born in the year 1968 at Bengaluru.',
   },
   {
     id: 18,
@@ -261,8 +261,7 @@ function Timeline() {
       </h1>
       <ol className="border-l border-gray-300">
         {timeline.map((item) => (
-          // eslint-disable-next-line react/jsx-key
-          <li>
+          <li key={item.id}>
             <div className="flex-start flex items-center pt-3">
               <div className="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
               <h3 className="text-sm font-semibold text-gray-600 dark:text-white">
@@ -295,7 +294,7 @@ const event = [
   'Various Details about Shri Shanthaveri Gopala Gowda, about his life, Details about all the programs relating to the commemoration of his Birth Centenary, various articles published in Daily Newspapers, various Audio Snippets made, YouTube Videos, his various images, the images of various letters, speeches given in the assembly, all of this information would be available in one single website created for this purpose.',
   'Just like on the website, even on other social media sites such as YouTube, Instagram, Facebook, WhatsApp, and other similar platforms, one-minute videos, audio, and text that one can read and hear would be produced and uploaded.',
   'These audio snippets would be played regularly on various radio channels for a period of 1 year.',
-  'On 14th March 2023, a Public Event would be held to commemorate the Centenary Year of the Late Shri Shanthaveri Gopala Gowda on which an issue of…………… would be released.',
+  'By the end of the year 2023, a Public Event would be held to commemorate the Centenary Year of the Late Shri Shanthaveri Gopala Gowda on which centenary commemorative souvenir issue would be released.',
   'The Postal Department would be reached out to and a postal letter, a postal envelope bearing his image would be released in commemoration of the centenary year.',
   'A request would be made to the Govt. of Karnataka to install a statue of Late Shri. Gopala Gowda Shanthaveri in front of Vidhana Soudha.',
   'Various such programs and initiatives would be undertaken throughout the coming year and the Centenary Birth Year of Shri Shanthaveri Gopala Gowda would be celebrated in a meaningful manner.',
@@ -372,7 +371,7 @@ export default function Home({ articles }) {
         <meta name="twitter:image" content={previewImg} />
       </Head>
       <Container className="mt-8 sm:mt-12">
-        <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+        <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pr-20">
             <div className="pr-2.5 sm:flex sm:items-center lg:max-w-none">
               <Image
@@ -386,7 +385,8 @@ export default function Home({ articles }) {
           </div>
           <div className="lg:order-second lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Shanthaveri Gopala Gowda
+              Shanthaveri <br></br>
+              <span>Gopala Gowda</span>
             </h1>
             <div className="mt-6 space-y-7 text-justify text-base text-zinc-700 dark:text-zinc-400">
               <p>
