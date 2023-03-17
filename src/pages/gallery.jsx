@@ -8,6 +8,8 @@ import React from 'react'
 
 import { useState } from 'react'
 import { Gallery } from 'react-grid-gallery'
+import Lightbox from 'react-18-image-lightbox'
+import 'react-18-image-lightbox/style.css'
 
 import { Container } from '@/components/Container'
 import {
