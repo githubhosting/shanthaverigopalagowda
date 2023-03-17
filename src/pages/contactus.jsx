@@ -1,7 +1,8 @@
 import Head from 'next/head'
-
+import Image from 'next/image'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Container } from '@/components/Container'
+import rammanohar from '@/images/photos/Ramamanohar.png'
 
 export default function Media() {
   return (
@@ -14,7 +15,7 @@ export default function Media() {
         />
         <meta
           name="keywords"
-          content="Shanthaveri Gopala Gowda, Shanthaveri Gopala Gowda Centenary, Shanthaveri Gopala Gowda Centenary Tribute, Shanthaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
+          content="Shanthaveri Gopala Gowda, Shanthaveri Gopala Gowda Centenary, Shanthaveri Gopala Gowda Centenary Tribute, Shanthaveri Gopala Gowda Centenary, Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
         />
       </Head>
       <Container className="mt-8 sm:mt-16">
@@ -22,19 +23,25 @@ export default function Media() {
           Contact Us
         </h1>
         <section className="body-font text-gray-600 ">
-          <div className="text-center sm:py-8 sm:pr-8">
+          <div className="text-center sm:py-8">
             <div className="flex flex-col items-center justify-center text-center">
+                <Image
+                className='rounded-full shadow-md '
+                src={rammanohar}
+                alt="Image"
+                width={200}
+                height={200}
+                />
               <h2 className="title-font mt-4 text-lg font-medium text-gray-900 dark:text-zinc-100">
                 Ram Manohar Shanthaveri
               </h2>
-              <p className="text-base">Son of Shanthaveri Gopala Gowda</p>
-              <div className="mt-2 mb-4 h-1 w-32 rounded bg-sky-600"></div>
-              <p className="text-dark flex items-center text-sm font-medium dark:text-zinc-100">
+              <p className="text-base text-zinc-800 dark:text-zinc-100 mb-4">Son of Shanthaveri Gopala Gowda</p>
+              <p className="text-dark flex items-center text-xl font-medium dark:text-zinc-100">
                 <span className="text-primary mr-3">
                   <svg
                     width="19"
                     height="21"
-                    viewBox="0 0 19 21"
+                    viewBox="0 0 20 20"
                     className="fill-current"
                   >
                     <path d="M17.8076 11.8129C17.741 11.0475 17.1088 10.5151 16.3434 10.5151H2.16795C1.40261 10.5151 0.803643 11.0808 0.703816 11.8129L0.00502514 18.8008C-0.0282506 19.2001 0.104853 19.6327 0.371059 19.9322C0.637265 20.2317 1.03657 20.398 1.46916 20.398H17.0755C17.4748 20.398 17.8741 20.2317 18.1736 19.9322C18.4398 19.6327 18.5729 19.2334 18.5396 18.8008L17.8076 11.8129ZM17.2751 19.1668C17.2419 19.2001 17.1753 19.2667 17.0422 19.2667H1.46916C1.36933 19.2667 1.2695 19.2001 1.23623 19.1668C1.20295 19.1336 1.1364 19.067 1.16968 18.9339L1.86847 11.9127C1.86847 11.7463 2.00157 11.6465 2.16795 11.6465H16.3767C16.5431 11.6465 16.6429 11.7463 16.6762 11.9127L17.375 18.9339C17.3417 19.0337 17.3084 19.1336 17.2751 19.1668Z" />
@@ -46,12 +53,12 @@ export default function Media() {
                   <span>+91 9901803300</span>
                 </a>
               </p>
-              <p className="text-dark mt-5 flex items-center text-sm font-medium dark:text-zinc-100">
+              <p className="text-dark mt-3 flex items-center text-xl font-medium dark:text-zinc-100">
                 <span className="text-primary mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="19"
-                    height="21"
+                    width="20"
+                    height="20"
                     fill="currentColor"
                     className="bi bi-envelope"
                     viewBox="0 0 16 16"

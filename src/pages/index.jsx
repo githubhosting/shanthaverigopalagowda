@@ -76,7 +76,7 @@ function Poem() {
                   priority={true}
                   className="object-cover lg:h-full lg:w-full"
                   src={youngSGG}
-                  alt="young Shanthaveri gopala gowda"
+                  alt="Young Shanthaveri Gopala Gowda"
                 />
               </div>
             </div>
@@ -338,7 +338,7 @@ export default function Home({ articles }) {
         />
         <meta
           name="keywords"
-          content="Shanthaveri Gopala Gowda, Shanthaveri Gopala Gowda Centenary, Shanthaveri Gopala Gowda Centenary Tribute, Shanthaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
+          content="Shanthaveri Gopala Gowda, Shanthaveri Gopala Gowda Centenary, Shanthaveri Gopala Gowda Centenary Tribute, Shanthaveri Gopala Gowda Centenary, Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
         />
         <meta
           name="author"
@@ -386,7 +386,7 @@ export default function Home({ articles }) {
           </div>
           <div className="lg:order-second lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Shanthaveri Gopala Gowda
+              Shanthaveri<br></br><span>Gopala Gowda</span>
             </h1>
             <div className="mt-6 space-y-7 text-justify text-base text-zinc-700 dark:text-zinc-400">
               <p>
