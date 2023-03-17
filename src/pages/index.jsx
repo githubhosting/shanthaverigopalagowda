@@ -19,6 +19,7 @@ import portraitImage from '@/images/potrait.png'
 import portraitImage2 from '@/images/shanthaverigopalagowda.png'
 import circleImage from '@/images/ShanthaveriGopalaGowdaCircle.png'
 import youngSGG from '@/images/youngShanthaverigopalagowda.jpeg'
+import previewImg from '@/images/preview.png'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
@@ -72,6 +73,7 @@ function Poem() {
             <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0">
               <div className="aspect-w-10 aspect-h-12 sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none overflow-hidden rounded-xl shadow-xl lg:h-full">
                 <Image
+                  priority={true}
                   className="object-cover lg:h-full lg:w-full"
                   src={youngSGG}
                   alt="young Shanthaveri gopala gowda"
@@ -255,7 +257,7 @@ function Timeline() {
   return (
     <>
       <h1 className="mb-6 border-t pt-4 text-2xl font-bold tracking-tight text-insp-200 dark:border-zinc-700 dark:text-zinc-100 sm:text-3xl">
-        About Shantaveri Gopala Gowda
+        About Shanthaveri Gopala Gowda
       </h1>
       <ol className="border-l border-gray-300">
         {timeline.map((item) => (
@@ -295,7 +297,7 @@ const event = [
   'These audio snippets would be played regularly on various radio channels for a period of 1 year.',
   'On 14th March 2023, a Public Event would be held to commemorate the Centenary Year of the Late Shri Shanthaveri Gopala Gowda on which an issue of…………… would be released.',
   'The Postal Department would be reached out to and a postal letter, a postal envelope bearing his image would be released in commemoration of the centenary year.',
-  'A request would be made to the Govt. of Karnataka to install a statue of Late Shri. Gopala Gowda Shantaveri in front of Vidhana Soudha.',
+  'A request would be made to the Govt. of Karnataka to install a statue of Late Shri. Gopala Gowda Shanthaveri in front of Vidhana Soudha.',
   'Various such programs and initiatives would be undertaken throughout the coming year and the Centenary Birth Year of Shri Shanthaveri Gopala Gowda would be celebrated in a meaningful manner.',
 ]
 
@@ -329,18 +331,18 @@ export default function Home({ articles }) {
   return (
     <>
       <Head>
-        <title>Shantaveri Gopala Gowda - A Legacy of Political Activism</title>
+        <title>Shanthaveri Gopala Gowda - A Legacy of Political Activism</title>
         <meta
           name="description"
-          content="Explore the life and legacy of Shantaveri Gopala Gowda, one of Karnataka's most prominent socialist leaders. Learn about his early involvement in the freedom movement, his introduction to socialism and his role in shaping the political landscape of the state. Discover his contributions to the 'Land for the Tiller' movement and his stance on the unification of Karnataka. A centenary tribute website"
+          content="Explore the life and legacy of Shanthaveri Gopala Gowda, one of Karnataka's most prominent socialist leaders. Learn about his early involvement in the freedom movement, his introduction to socialism and his role in shaping the political landscape of the state. Discover his contributions to the 'Land for the Tiller' movement and his stance on the unification of Karnataka. A centenary tribute website."
         />
         <meta
           name="keywords"
-          content="Shantaveri Gopala Gowda, Shantaveri Gopala Gowda Centenary, Shantaveri Gopala Gowda Centenary Tribute, Shantaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
+          content="Shanthaveri Gopala Gowda, Shanthaveri Gopala Gowda Centenary, Shanthaveri Gopala Gowda Centenary Tribute, Shanthaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
         />
         <meta
           name="author"
-          content="Shantaveri Gopala Gowda Centenary Tribute"
+          content="Shanthaveri Gopala Gowda Centenary Tribute"
         />
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
@@ -350,13 +352,24 @@ export default function Home({ articles }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="apple-mobile-web-app-title"
-          content="Shantaveri Gopala Gowda"
+          content="Shanthaveri Gopala Gowda"
         />
         <meta
           name="google-site-verification"
           content="9l6jBCdCjl0ZW1Q6RrsllF3h9y5WdO-_rNvO1BKgH9s"
         />
         <link rel="preload" href="../public/fonts/Malige.ttf" as="font/ttf" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@GShanthaveri" />
+        <meta
+          name="twitter:title"
+          content="Shanthaveri Gopala Gowda - A Legacy of Political Activism"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the life and legacy of Shanthaveri Gopala Gowda, one of Karnataka's most prominent socialist leaders. Learn about his early involvement in the freedom movement, his introduction to socialism and his role in shaping the political landscape of the state. Discover his contributions to the 'Land for the Tiller' movement and his stance on the unification of Karnataka. A centenary tribute website."
+        />
+        <meta name="twitter:image" content={previewImg} />
       </Head>
       <Container className="mt-8 sm:mt-12">
         <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -366,6 +379,7 @@ export default function Home({ articles }) {
                 src={portraitImage2}
                 alt="Shanthaveri Gopala Gowda Image"
                 sizes="(min-width: 1024px) 32rem, 20rem"
+                priority={true}
                 className="aspect-auto rounded-2xl bg-zinc-100 object-cover shadow-lg dark:bg-zinc-800"
               />
             </div>

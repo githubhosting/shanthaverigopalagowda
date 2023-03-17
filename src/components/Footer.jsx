@@ -67,7 +67,7 @@ export function Footer() {
                 <NavLink href="/gallery">Gallery</NavLink>
                 <NavLink href="/letters">Letters</NavLink>
                 <NavLink href="/books">Books</NavLink>
-                <NavLink href="/quizz">Quizz</NavLink>
+                <NavLink href="/quiz">Quiz</NavLink>
                 <NavLink href="/media">Media</NavLink>
                 <NavLink href="/contactus">Contact Us</NavLink>
               </div>
@@ -99,19 +99,10 @@ export function Footer() {
               &copy; {new Date().getFullYear()} Shanthaveri Gopala Gowda. All
               rights reserved.
             </p>
-            <PageViews />
+            {/* <PageViews /> */}
           </Container.Inner>
         </div>
       </Container.Outer>
     </footer>
   )
 }
-
-//  add page view count
-
-// function PageViews() {
-//   const { data } = useSWR('/api/page-views', fetcher)
-//   const views = new Number(data?.total)
-
-//   return <>{views > 0 ? views.toLocaleString() : '–––'}</>
-// }

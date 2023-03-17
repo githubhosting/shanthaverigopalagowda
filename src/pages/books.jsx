@@ -148,7 +148,7 @@ export default function Books() {
         <meta name="description" content="Books - Shanthaveri Gopala Gowda" />
         <meta
           name="keywords"
-          content="Shantaveri Gopala Gowda, Shantaveri Gopala Gowda Centenary, Shantaveri Gopala Gowda Centenary Tribute, Shantaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
+          content="Shanthaveri Gopala Gowda, Shanthaveri Gopala Gowda Centenary, Shanthaveri Gopala Gowda Centenary Tribute, Shanthaveri Gopala Gowda Centenary, , Gopal Gowda, Gopalagowda, Thirthahalli Constituency, Shimoga politics, Sagar Hosanagar, Goa agitation, Kagodu Farmers, Ramamanohar Lohia, Sonakka, Rashtriya Samajwadi Party, Karnataka Samajwadi Party, Socialist Leader India, Firebrand politician, Konanduru Lingappa, Land Reforms Act, Araga, Renaming Mysore, Socialist Leader, Avasthe, Victoria Hospital"
         />
       </Head>
       <Container className="mt-8 sm:mt-16">
@@ -157,10 +157,8 @@ export default function Books() {
         </h1>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {books.map((book) => (
-            <div
-              key={book.title}
-              className="flex flex-col items-center justify-center rounded-lg bg-white p-4 shadow-lg dark:bg-gray-800"
-            >
+            // eslint-disable-next-line react/jsx-key
+            <div className="flex flex-col items-center justify-center rounded-lg border bg-white p-4 shadow-lg dark:border-zinc-600 dark:bg-zinc-800">
               <div className="relative mb-4 h-56 w-40">
                 <div className="flip">
                   <div className="flip-content">
@@ -194,10 +192,10 @@ export default function Books() {
                 </div>
               </div>
 
-              <h2 className="text-justify text-lg font-semibold text-gray-800 dark:text-white">
+              <h2 className="text-center text-lg font-semibold text-gray-800 dark:text-white">
                 {book.title}
               </h2>
-              <p className="text-justify text-sm font-medium text-gray-600 dark:text-gray-400">
+              <p className="text-center text-sm font-medium text-gray-600 dark:text-gray-400">
                 {book.date}
               </p>
               <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
