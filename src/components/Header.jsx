@@ -255,6 +255,7 @@ function Avatar({ large = false, className, ...props }) {
     </Link>
   )
 }
+
 function Homebutton() {
   return (
     <svg
@@ -293,10 +294,7 @@ function LanguageToggle() {
 
   return (
     <div className="relative">
-      <div
-        // type="button"
-        className="flex h-10 w-10 items-center justify-center"
-      >
+      <div className="flex h-10 w-10 items-center justify-center">
         <span className="text-md font-medium dark:text-white">
           {languageIcon}
         </span>

@@ -2,6 +2,7 @@ import Image from 'next/future/image'
 import Head from 'next/head'
 import Link from 'next/link'
 import clsx from 'clsx'
+import { useEffect, useState } from 'react'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -26,6 +27,8 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
+// import { getAllLetters } from '@/lib/getAllLetters'
+
 import { formatDate } from '@/lib/formatDate'
 
 function SocialLink({ icon: Icon, ...props }) {
@@ -326,7 +329,63 @@ function Events() {
   )
 }
 
+function ArrowCircleUpIcon(props) {
+  return (
+    <svg
+      className="h-6 w-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 10l7-7m0 0l7 7m-7-7v18"
+      />
+    </svg>
+  )
+}
 export default function Home({ articles }) {
+  // The back-to-top button is hidden at the beginning
+  const [showButton, setShowButton] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true)
+      } else {
+        setShowButton(false)
+      }
+    })
+  }, [])
+
+  // This function will scroll the window to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // for smoothly scrolling
+    })
+  }
+
+  // Dark Mode
+  useEffect(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    localStorage.theme = 'light'
+    localStorage.theme = 'dark'
+    localStorage.removeItem('theme')
+  }, [])
+
   return (
     <>
       <Head>
@@ -377,7 +436,7 @@ export default function Home({ articles }) {
               <Image
                 src={portraitImage2}
                 alt="Shanthaveri Gopala Gowda Image"
-                sizes="(min-width: 1024px) 32rem, 20rem"
+                sizes="(min-width: 1024px) 28rem, 16rem"
                 priority={true}
                 className="aspect-auto rounded-2xl bg-zinc-100 object-cover shadow-lg dark:bg-zinc-800"
               />
@@ -461,14 +520,14 @@ export default function Home({ articles }) {
               <SocialLinks
                 href="mailto:shanthaveri@gmail.com"
                 icon={MailIcon}
-                className="mt-8 pt-8"
+                className="mt-6 pt-4 md:pt-8"
               >
                 shanthaveri@gmail.com
               </SocialLinks>
               <SocialLinks
                 href="tel:9901803300"
                 icon={phoneIcon}
-                className="pt-8"
+                className="pt-4 md:pt-8"
               >
                 +91 9901803300
               </SocialLinks>
@@ -496,6 +555,11 @@ export default function Home({ articles }) {
         <Timeline />
         <Events />
       </Container>
+      {showButton && (
+        <button onClick={scrollToTop} className="back-to-top">
+          <ArrowCircleUpIcon />
+        </button>
+      )}
     </>
   )
 }
@@ -507,29 +571,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      articles: (await getAllArticles())
+      letters: (await getAllArticles())
         .slice(0, 4)
         .map(({ component, ...meta }) => meta),
     },
   }
 }
-
-//add a page view counter
-
-// import { useState, useEffect } from 'react'
-
-// function usePageViews() {
-//   const [pageViews, setPageViews] = useState(0)
-
-//   useEffect(() => {
-//     const fetchPageViews = async () => {
-//       const res = await fetch('/api/page-views')
-//       const json = await res.json()
-//       setPageViews(json.pageViews)
-//     }
-
-//     fetchPageViews()
-//   }, [])
-
-//   return pageViews
-// }

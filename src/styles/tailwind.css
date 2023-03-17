@@ -7,6 +7,11 @@
   src: url('../public/fonts/Malige.ttf');
   font-display: swap;
 }
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
 
 .custom-overlay__caption {
   background-color: rgba(0, 0, 0, 0.8);
@@ -122,4 +127,26 @@
 }
 .flip-back {
   transform: rotateY(180deg);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /* background: orange; */
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  padding: 3px;
+  box-shadow: 0 5px 5px rgb(200, 200, 200, 0.4);
+}
+
+.back-to-top:hover {
+  background: black;
 }
