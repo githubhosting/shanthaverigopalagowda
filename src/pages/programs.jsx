@@ -40,7 +40,7 @@ const events = [
     id: 1,
     title:
       'Inauguration of Sri. Shanthaveri Gopala Gowda’s Centenary Celebrations, Gopala Gowda Circle. ',
-    date: '14th March 2023',
+    date: '14th March 2022',
     description: 'cvmh',
     images: [
       event1_1,

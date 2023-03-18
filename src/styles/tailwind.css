@@ -133,18 +133,17 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  /* background: orange; */
   background: linear-gradient(
     112.1deg,
     rgb(32, 38, 57) 11.4%,
     rgb(63, 76, 119) 70.2%
   );
-  color: white;
+  color: #ffffffd4;
   cursor: pointer;
   border-radius: 8px;
   border: none;
   padding: 3px;
-  box-shadow: 0 5px 5px rgb(200, 200, 200, 0.4);
+  box-shadow: 0 5px 5px rgb(200, 200, 200, 0.2);
 }
 
 .back-to-top:hover {

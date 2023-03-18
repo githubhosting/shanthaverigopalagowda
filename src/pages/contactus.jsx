@@ -23,7 +23,7 @@ export default function Media() {
         <h1 className="pb-10 text-center text-4xl font-bold text-insp2 dark:text-white">
           Contact Us
         </h1>
-        <section className="body-font text-gray-600 ">
+        <section className="body-font rounded-md bg-white p-5 text-gray-600 dark:bg-zinc-800">
           <div className="text-center sm:py-8 sm:pr-8">
             <div className="flex flex-col items-center justify-center text-center">
               <Image
@@ -78,6 +78,32 @@ export default function Media() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        <section className="mt-12 flex items-center justify-center rounded-md bg-white dark:bg-zinc-800">
+          <div className="px-6 py-6">
+            <p className="text-md mb-3 text-center font-medium text-gray-700 dark:text-white">
+              Contact the Developer
+            </p>
+            <p className="text-dark mt-3 flex items-center justify-center text-sm font-medium dark:text-zinc-100">
+              <span className="text-primary mr-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="21"
+                  fill="currentColor"
+                  className="bi bi-envelope"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                </svg>
+              </span>
+              <span>
+                <a href="mailto:shravanrevanna@gmail.com">
+                  shravanrevanna@gmail.com
+                </a>
+              </span>
+            </p>
           </div>
         </section>
       </Container>
