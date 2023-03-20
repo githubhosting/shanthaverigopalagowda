@@ -169,7 +169,7 @@ const timeline = [
     date: '1948',
     title: 'Forged an Alliance between Congress and Samajwadi Party',
     description:
-      'Was instrumental and played a pivotal role in forging an alliance between  the Congress and the Samajwadi Party.',
+      'Was instrumental and played a pivotal role in forging an alliance between the Congress and the Samajwadi Party.',
   },
   {
     id: 7,
@@ -183,14 +183,14 @@ const timeline = [
     date: '1951',
     title: 'Kagodu Farmers’ Satyagraha Movement',
     description:
-      'Successfully led an indefinite fast held  in Kagodu to provide justice to the farmers of Karnataka, which is still fresh in the minds of people of Kagodu and Karnataka.',
+      'Successfully led an indefinite fast held in Kagodu to provide justice to the farmers of Karnataka, which is still fresh in the minds of people of Kagodu and Karnataka.',
   },
   {
     id: 9,
     date: '1951',
     title: 'Met Dr.RamamanoharLohia in Kagodu and Jayaprakash Narayan',
     description:
-      'He met with socialist leaders  such as Dr. Ramamanohar Lohia, Jayaprakash Narayan and Kamaldevi Chattopadhyay and joined their Socialist party  after quitting the Congress.',
+      'He met with socialist leaders such as Dr. Ramamanohar Lohia, Jayaprakash Narayan and Kamaldevi Chattopadhyay and joined their Socialist party  after quitting the Congress.',
   },
   {
     id: 10,
@@ -225,14 +225,14 @@ const timeline = [
     date: '1962',
     title: 'Elected as M.L.A',
     description:
-      'Run with modest resources, borrowed from his supporters who rose above their  communal identities and rallied behind him  for his election campaigns. He enjoyed huge admiration and immense local support for his exemplary courage, integrity and charisma.',
+      'Run with modest resources, borrowed from his supporters who rose above their communal identities and rallied behind him for his election campaigns. He enjoyed huge admiration and immense local support for his exemplary courage, integrity and charisma.',
   },
   {
     id: 15,
     date: '1964',
     title: 'Marriage to Smt. Sonakka',
     description:
-      'He married Smt. Sonakka, a school teacher  in 1964. One of the few marriages that was solemnized at Vidhana Soudha',
+      'He married Smt. Sonakka, a school teacher in 1964. One of the few marriages that was solemnized at Vidhana Soudha',
   },
   {
     id: 16,
