@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -7,6 +8,7 @@ import { Analytics } from '@vercel/analytics/react'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
+import '@/styles/styles.css'
 
 function usePrevious(value) {
   let ref = useRef()

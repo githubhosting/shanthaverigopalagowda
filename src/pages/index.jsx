@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import Script from 'next/script'
 import {
   TwitterIcon,
   InstagramIcon,
@@ -66,7 +67,7 @@ function MailIcon(props) {
 function Poem() {
   return (
     <div className="border-t pt-4 dark:border-zinc-700 lg:py-6">
-      <div className="bg-grey-900 pb-8 lg:relative lg:z-10 lg:pb-0">
+      <div className="pb-8 lg:relative lg:z-10 lg:pb-0">
         <div className="items-center lg:ml-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-4 lg:px-8">
           <div className="relative lg:-my-8">
             <div
@@ -428,8 +429,21 @@ export default function Home({ articles }) {
           content="Explore the life and legacy of Shanthaveri Gopala Gowda, one of Karnataka's most prominent socialist leaders. Learn about his early involvement in the freedom movement, his introduction to socialism and his role in shaping the political landscape of the state. Discover his contributions to the 'Land for the Tiller' movement and his stance on the unification of Karnataka. A centenary tribute website."
         />
         <meta name="twitter:image" content={previewImg} />
+        <script type="text/javascript">
+          {`function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,kn,hi,ta,te',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+          }, 'google_translate_element');
+        }`}
+        </script>
       </Head>
       <Container className="mt-8 sm:mt-12">
+        <Script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" />
+        <div className="flex flex-col items-start justify-center">
+          <div id="google_translate_element"></div>
+        </div>
         <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
           <div className="lg:pr-20">
             <div className="pr-2.5 sm:flex sm:items-center lg:max-w-none">
