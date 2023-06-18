@@ -417,6 +417,10 @@ export default function Home({ articles }) {
           name="google-site-verification"
           content="9l6jBCdCjl0ZW1Q6RrsllF3h9y5WdO-_rNvO1BKgH9s"
         />
+        <meta
+          name="google-site-verification"
+          content="AOyjXR-GQ8cfwRXxXayjNbTdma0XL_pVraLO6kvkyaM"
+        />
         <link rel="preload" href="../public/fonts/Malige.ttf" as="font/ttf" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@GShanthaveri" />
