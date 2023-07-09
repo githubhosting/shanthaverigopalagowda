@@ -1,7 +1,23 @@
 import Head from 'next/head'
-
+import React, { useState, useEffect, useRef } from 'react'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Container } from '@/components/Container'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDRSRvZa40f49r9GhcTqWHJOOUkS09hg5M',
+  authDomain: 'shanthaverigopalagowda-8aa2d.firebaseapp.com',
+  databaseURL:
+    'https://shanthaverigopalagowda-8aa2d-default-rtdb.firebaseio.com',
+  projectId: 'shanthaverigopalagowda-8aa2d',
+  storageBucket: 'shanthaverigopalagowda-8aa2d.appspot.com',
+  messagingSenderId: '905421208104',
+  appId: '1:905421208104:web:b4bd3d62430e9f294e931d',
+}
+firebase.initializeApp(firebaseConfig)
+const database = firebase.firestore()
+
 function DownloadIcon(props) {
   return (
     <svg
@@ -141,6 +157,29 @@ function Debate() {
 }
 
 export default function Media() {
+  const [url, setUrl] = useState([])
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await database.collection('Media').get()
+        const data = response.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setUrl(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchData()
+  }, [])
+
+  const embedded_ul = url.map((item) => {
+    const videoId = item.url.split('/').pop()
+    const embeddedUrl = `https://www.youtube.com/embed/${videoId}`
+    return { id: item.id, url: embeddedUrl }
+  })
   return (
     <>
       <Head>
@@ -160,27 +199,22 @@ export default function Media() {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
           Watch Youtube Videos
         </h1>
-
-        <div className="mt-10">
-          <div>
-            <iframe
-              className="aspect-video w-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/wCbl4g7veyo"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-          <div className="mt-10">
-            <iframe
-              className="aspect-video w-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/rBpWv5WqSds"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
+        <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
+          {embedded_ul.map((url) => (
+            <div key={url.id} className="mt-6">
+              <iframe
+                className="aspect-video w-full rounded-lg shadow-lg"
+                src={url.url}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
         </div>
+        <h1 className="mt-10 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+          Listen to Youtube Audios
+        </h1>
       </Container>
       <Container className="mt-6 md:mt-7">
         <Debate />

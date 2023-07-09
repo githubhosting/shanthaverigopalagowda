@@ -350,7 +350,6 @@ function ArrowCircleUpIcon(props) {
   )
 }
 export default function Home({ articles }) {
-  // The back-to-top button is hidden at the beginning
   const [showButton, setShowButton] = useState(false)
 
   useEffect(() => {

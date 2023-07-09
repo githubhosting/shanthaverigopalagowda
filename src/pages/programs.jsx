@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Image from 'next/future/image'
+import React, { useState, useEffect, useRef } from 'react'
 
 import { Container } from '@/components/Container'
 import event1_1 from '@/images/events/1 (1).jpg'
@@ -34,6 +35,22 @@ import event3_9 from '@/images/events/3 (9).jpg'
 import event3_10 from '@/images/events/3 (10).jpg'
 import event4 from '@/images/events/4.jpeg'
 import event5 from '@/images/events/5.jpeg'
+
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDRSRvZa40f49r9GhcTqWHJOOUkS09hg5M',
+  authDomain: 'shanthaverigopalagowda-8aa2d.firebaseapp.com',
+  databaseURL:
+    'https://shanthaverigopalagowda-8aa2d-default-rtdb.firebaseio.com',
+  projectId: 'shanthaverigopalagowda-8aa2d',
+  storageBucket: 'shanthaverigopalagowda-8aa2d.appspot.com',
+  messagingSenderId: '905421208104',
+  appId: '1:905421208104:web:b4bd3d62430e9f294e931d',
+}
+firebase.initializeApp(firebaseConfig)
+const database = firebase.firestore()
 
 const events = [
   {
@@ -108,6 +125,23 @@ const events = [
 ]
 
 export default function Programs() {
+  const [programs, setOtherlinks] = useState([])
+  useEffect(() => {
+    database
+      .collection('Programs')
+      .get()
+      .then((snapshot) => {
+        const programs = []
+        snapshot.forEach((doc) => {
+          const data = doc.data()
+          programs.push(data)
+        })
+        setOtherlinks(programs)
+      })
+      .catch((error) => console.log(error))
+  }, [])
+
+  console.log(programs)
   return (
     <>
       <Head>
