@@ -28,7 +28,8 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
-// import { getAllLetters } from '@/lib/getAllLetters'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import { formatDate } from '@/lib/formatDate'
 
@@ -41,7 +42,7 @@ function SocialLink({ icon: Icon, ...props }) {
 }
 function SocialLinks({ className, href, children, icon: Icon }) {
   return (
-    <li className={clsx(className, 'flex')}>
+    <li className={clsx(className, 'flex')} key={href}>
       <Link
         href={href}
         target="_blank"
@@ -131,11 +132,10 @@ function Poem() {
 }
 const timeline = [
   {
-    id: 1,
-    date: '14 March, 1923',
-    title: 'Birth',
-    description:
-      'Sri. Shanthaveri Gopala Gowda was born in Shanthaveri a village in Thirthahalli Taluk of Shimoga District into a poor agricultural family to Kolluraiah Gowda and Seshamma.',
+    id: "timeline.1.id",
+    date: 'timeline.1.date',
+    title: 'timeline.1.title',
+    description:'timeline.1.description',
   },
   {
     id: 2,
@@ -258,6 +258,7 @@ const timeline = [
   },
 ]
 function Timeline() {
+  const { t } = useTranslation()
   return (
     <>
       <h1 className="mb-6 border-t pt-4 text-2xl font-bold tracking-tight text-insp-200 dark:border-zinc-700 dark:text-zinc-100 sm:text-3xl">
@@ -269,15 +270,15 @@ function Timeline() {
             <div className="flex-start flex items-center pt-3">
               <div className="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
               <h3 className="text-sm font-semibold text-gray-600 dark:text-white">
-                {item.date}
+                {t(item.date)}
               </h3>
             </div>
-            <div className="mt-0.5 ml-4 mb-6">
+            <div className="mb-6 ml-4 mt-0.5">
               <h4 className="mb-1.5 text-lg font-semibold text-zinc-800 dark:text-zinc-100 lg:text-xl">
-                {item.title}
+                {t(item.title)}
               </h4>
               <p className="mb-3 text-justify text-gray-600 dark:text-zinc-400">
-                {item.description}
+                {t(item.description)}
               </p>
             </div>
           </li>
@@ -350,6 +351,7 @@ function ArrowCircleUpIcon(props) {
   )
 }
 export default function Home({ articles }) {
+  const { t } = useTranslation()
   const [showButton, setShowButton] = useState(false)
 
   useEffect(() => {
@@ -461,8 +463,8 @@ export default function Home({ articles }) {
           </div>
           <div className="lg:order-second lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Shanthaveri <br></br>
-              <span>Gopala Gowda</span>
+              {t("name")} <br></br>
+              <span>{t("span")}</span>
             </h1>
             <div className="mt-6 space-y-7 text-justify text-base text-zinc-700 dark:text-zinc-400">
               <p>
@@ -552,7 +554,7 @@ export default function Home({ articles }) {
           </div>
         </div>
         <div className="mt-10 flex items-center justify-center rounded-xl bg-slate-50 p-5 shadow-md dark:bg-gray-800 dark:text-white">
-          <h2 className="text-justify font-bold italic">
+          <h2 className="text-center font-bold italic">
             Please join us as we commemorate his centenary birth year and
             celebrate his enduring legacy.
           </h2>
@@ -581,13 +583,15 @@ export default function Home({ articles }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
+  const { locale } = context
   if (process.env.NODE_ENV === 'production') {
     await generateRssFeed()
   }
 
   return {
     props: {
+      ...(await serverSideTranslations(locale)),
       letters: (await getAllArticles())
         .slice(0, 4)
         .map(({ component, ...meta }) => meta),

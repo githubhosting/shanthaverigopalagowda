@@ -126,22 +126,7 @@ const events = [
 
 export default function Programs() {
   const [programs, setOtherlinks] = useState([])
-  useEffect(() => {
-    database
-      .collection('Programs')
-      .get()
-      .then((snapshot) => {
-        const programs = []
-        snapshot.forEach((doc) => {
-          const data = doc.data()
-          programs.push(data)
-        })
-        setOtherlinks(programs)
-      })
-      .catch((error) => console.log(error))
-  }, [])
 
-  console.log(programs)
   return (
     <>
       <Head>
@@ -162,7 +147,7 @@ export default function Programs() {
         <ul className="space-y-4">
           {events.map((event) => (
             <li
-              key={event.title}
+              key={event.id}
               className="dark:neumorphism mb-10 rounded-2xl border border-slate-100 p-5 shadow-lg dark:border-zinc-600"
             >
               <h3 className="text-center text-lg font-semibold text-gray-900 dark:text-zinc-100">

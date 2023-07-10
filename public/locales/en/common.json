@@ -1,0 +1,19 @@
+{
+    "name": "Shanthaveri",
+    "span": "Gopala Gowda",
+    "helpLocize": "With using <1>locize</1> you directly support the future of <3>i18next</3>.",
+    "timeline": {
+        "1": {
+            "id": "1",
+            "date": "14 March, 1923",
+            "title": "Birth",
+            "description": "Sri. Shanthaveri Gopala Gowda was born in Shanthaveri a village in Thirthahalli Taluk of Shimoga District into a poor agricultural family to Kolluraiah Gowda and Seshamma."
+        },
+        "2": {
+            "id": "2",
+            "date": "1941",
+            "title": "Entered India’s Freedom Struggle Movement",
+            "description": "He was deeply inspired by the Freedom Struggle Movement of Mahatma Gandhiji and joined the movement in 1941"
+          }
+    }
+}

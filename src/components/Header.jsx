@@ -254,10 +254,11 @@ function LanguageToggle() {
   }, [])
 
   let isEnglish = locale === 'en'
+  let isKannada = locale === 'kn'
   let isEnglishDefault = defaultLocale === 'en'
 
   let language = isEnglish ? 'English' : 'Kannaga'
-  let languageIcon = isEnglish ? 'EN' : 'ಕನ್ನಡ'
+  let languageIcon = isEnglish ? 'ಕನ್ನಡ' : 'EN'
 
   return (
     <div className="relative">
@@ -272,6 +273,7 @@ function LanguageToggle() {
 
 export function Header() {
   let isHomePage = useRouter().pathname === '/'
+  const router = useRouter()
 
   let headerRef = useRef()
   let avatarRef = useRef()
@@ -396,8 +398,9 @@ export function Header() {
                 {isHomePage && (
                   <>
                     <Link
-                      href="http://shanthaverigopalagowda.in/"
-                      target="_blank"
+                      href={router.asPath}
+                      locale={router.locale === 'en' ? 'ka' : 'en'}
+                      // target="_blank"
                       className="pointer-events-auto rounded-md bg-sky-50 px-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10"
                     >
                       <LanguageToggle />

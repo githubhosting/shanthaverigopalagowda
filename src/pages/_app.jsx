@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
+import { appWithTranslation } from 'next-i18next'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -20,7 +21,7 @@ function usePrevious(value) {
   return ref.current
 }
 
-export default function App({ Component, pageProps, router }) {
+const App = ({ Component, pageProps, router }) => {
   let previousPathname = usePrevious(router.pathname)
 
   return (
@@ -41,3 +42,4 @@ export default function App({ Component, pageProps, router }) {
     </>
   )
 }
+export default appWithTranslation(App)
