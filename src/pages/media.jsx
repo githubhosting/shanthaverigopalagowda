@@ -62,6 +62,15 @@ function ViewIcon() {
   )
 }
 
+const debatepdf = [
+  {
+    id: 1,
+    date: '1952-06-18',
+    title: 'Credentials',
+    link: 'https://drive.google.com/file/d/1Gv1w2Nqz6i4yj3o2y9L8z9JiYh4r1d4q/view?usp=sharing',
+  },
+]
+
 function Debate() {
   const onButtonClick = () => {
     fetch('/documents/').then((response) => {
@@ -88,7 +97,7 @@ function Debate() {
   return (
     <>
       <p className="pt-10 text-left text-2xl font-bold text-insp2 dark:text-white">
-        Parliment Assembly Debate
+        Assembly Debates Extract
       </p>
       <ul
         role="list"
@@ -158,6 +167,7 @@ function Debate() {
 
 export default function Media() {
   const [url, setUrl] = useState([])
+  const [audioUrl, setAudioUrl] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -175,11 +185,34 @@ export default function Media() {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await database.collection('Media_Audio').get()
+        const data = response.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setAudioUrl(data)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchData()
+  }, [])
+
   const embedded_ul = url.map((item) => {
     const videoId = item.url.split('/').pop()
     const embeddedUrl = `https://www.youtube.com/embed/${videoId}`
     return { id: item.id, url: embeddedUrl }
   })
+
+  const embedded_audio = audioUrl.map((item) => {
+    const audioId = item.url.split('/').pop()
+    const embeddedUrl = `https://www.youtube.com/embed/${audioId}`
+    return { id: item.id, url: embeddedUrl }
+  })
+
   return (
     <>
       <Head>
@@ -196,6 +229,14 @@ export default function Media() {
         </h1>
       </Container>
       <Container className="mt-6 md:mt-7">
+        <div>
+          <iframe
+            src="https://drive.google.com/file/d/1WNxwx_8JEgMHpT8VWF6MpjWuVcI9QUSB/preview"
+            width="640"
+            height="480"
+            allow="autoplay"
+          ></iframe>
+        </div>
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
           Watch Youtube Videos
         </h1>
@@ -215,6 +256,19 @@ export default function Media() {
         <h1 className="mt-10 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
           Listen to Youtube Audios
         </h1>
+        <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
+          {embedded_audio.map((audioUrl) => (
+            <div key={audioUrl.id} className="mt-6">
+              <iframe
+                className="aspect-video w-full rounded-lg shadow-lg"
+                src={audioUrl.url}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ))}
+        </div>
       </Container>
       <Container className="mt-6 md:mt-7">
         <Debate />

@@ -438,7 +438,7 @@ export default function Home({ articles }) {
           {`function googleTranslateElementInit() {
             new google.translate.TranslateElement({
             pageLanguage: 'en',
-            includedLanguages: 'en,kn,hi,ta,te',
+            includedLanguages: 'en,kn,hi,ta,te,ml,mr,',
             layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
           }, 'google_translate_element');
         }`}
