@@ -71,6 +71,14 @@ const debatepdf = [
   },
 ]
 
+const audios = [
+  {
+    id: 1,
+    title: '1st audio',
+    src: '/audios/file_example.mp3',
+  },
+]
+
 function Debate() {
   const onButtonClick = () => {
     fetch('/documents/').then((response) => {
@@ -103,7 +111,7 @@ function Debate() {
         role="list"
         className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-10 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
       >
-        <li className="neumorphism mb-10 rounded-2xl border border-gray-200 p-5">
+        <li className="neumorphism mb-10 rounded-md border border-gray-200 p-5">
           <h3 className="text-center text-lg font-semibold text-gray-900 dark:text-zinc-100">
             1952-06-18
           </h3>
@@ -229,18 +237,17 @@ export default function Media() {
         </h1>
       </Container>
       <Container className="mt-6 md:mt-7">
-        <div>
+        <div className="pb-4">
           <iframe
+            className="aspect-video w-full rounded-lg shadow-lg"
             src="https://drive.google.com/file/d/1WNxwx_8JEgMHpT8VWF6MpjWuVcI9QUSB/preview"
-            width="640"
-            height="480"
             allow="autoplay"
           ></iframe>
         </div>
-        <h1 className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+        <h1 className="mt-10 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
           Watch Youtube Videos
         </h1>
-        <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
+        <div className="mt-3 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
           {embedded_ul.map((url) => (
             <div key={url.id} className="mt-6">
               <iframe
@@ -256,7 +263,7 @@ export default function Media() {
         <h1 className="mt-10 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
           Listen to Youtube Audios
         </h1>
-        <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
+        <div className="mt-3 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
           {embedded_audio.map((audioUrl) => (
             <div key={audioUrl.id} className="mt-6">
               <iframe
@@ -266,6 +273,29 @@ export default function Media() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
+            </div>
+          ))}
+        </div>
+        <h1 className="mt-10 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+          Listen to Youtube Audios
+        </h1>
+        <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
+          {audios.map((audiosrc, i) => (
+            <div
+              key={i}
+              className="rounded-md border bg-slate-100 p-3 shadow-sm dark:border-gray-200 dark:bg-gray-100"
+            >
+              <p className="py-2 text-center text-lg">{audiosrc.title}</p>
+              <audio
+                controls
+                key={audiosrc.id}
+                src={audiosrc.src}
+                type="audio/mpeg"
+                className="w-full rounded-full border border-gray-300 dark:border-gray-400"
+              >
+                Your browser does not support the
+                <code>audio</code> element.
+              </audio>
             </div>
           ))}
         </div>

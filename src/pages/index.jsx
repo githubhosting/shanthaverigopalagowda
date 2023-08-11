@@ -132,10 +132,10 @@ function Poem() {
 }
 const timeline = [
   {
-    id: "timeline.1.id",
+    id: 'timeline.1.id',
     date: 'timeline.1.date',
     title: 'timeline.1.title',
-    description:'timeline.1.description',
+    description: 'timeline.1.description',
   },
   {
     id: 2,
@@ -463,50 +463,21 @@ export default function Home({ articles }) {
           </div>
           <div className="lg:order-second lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              {t("name")} <br></br>
-              <span>{t("span")}</span>
+              {t('name')} <br></br>
+              <span>{t('span')}</span>
             </h1>
             <div className="mt-6 space-y-7 text-justify text-base text-zinc-700 dark:text-zinc-400">
-              <p>
-                Welcome to the official website dedicated to the life and legacy
-                of Sri. Shanthaveri Gopal Gowda, a pioneer of socialism in
-                Karnataka and a prominent socialist leader of India. His
-                leadership began as early as 1951 and he was an exemplary leader
-                that believed in service before self. He dedicated his entire
-                time and life to the welfare of farmers and the downtrodden. He
-                worked tirelessly to establish integrity and accountability in
-                public life. He belonged to a rare breed of politicians who
-                worked selflessly for the genuine upliftment of the poor farmer
-                and the downtrodden sections of society.
-              </p>
-              <p>
-                Ram Manohar Lohia deeply influenced him and he established
-                himself as a mass leader as early as 1951. He was considered
-                charismatic and gained a considerable following.
-              </p>
-              <p>
-                He mentored several socialists in Karnataka including J.H.
-                Patel, Bangarappa, S.M. Krishna, and D. Devaraj Urs who later
-                became Chief Ministers of Karnataka. Urs was inspired and deeply
-                influenced by the depth of the thoughts and sensitivity that Sri
-                Gopala Gowda had for farmers and the downtrodden. The Land
-                Reforms Act and the Renaming of Mysore state to Karnataka had
-                their origins in the association of Devraj Urs to Sri
-                Shanthaveri Gopal Gowda.
-              </p>
-              <p>
-                N. Dharam Singh, the former Chief Minister of Karnataka said in
-                the publication of his biography that Sri Gopal Gowda’s
-                political contributions and the causes that he fought for are
-                significant in the history of the legislature.
-              </p>
+              <p>{t('p1')}</p>
+              <p>{t('p2')}</p>
+              <p>{t('p3')}</p>
+              <p>{t('p4')}</p>
               <div className="flex justify-center">
                 <Button
                   href="/about"
                   className="focus:shadow-outline-blue flex w-full items-center justify-center rounded-md border border-transparent bg-sky-500 px-8 py-3 text-base font-medium leading-6 text-white shadow-sm transition duration-150 ease-in-out hover:bg-sky-400 focus:outline-none active:bg-sky-600"
                   aria-label="Read more about Shanthaveri Gopala Gowda"
                 >
-                  Read More
+                  {t('b1')}
                 </Button>
               </div>
             </div>
@@ -554,10 +525,7 @@ export default function Home({ articles }) {
           </div>
         </div>
         <div className="mt-10 flex items-center justify-center rounded-xl bg-slate-50 p-5 shadow-md dark:bg-gray-800 dark:text-white">
-          <h2 className="text-center font-bold italic">
-            Please join us as we commemorate his centenary birth year and
-            celebrate his enduring legacy.
-          </h2>
+          <h2 className="text-center font-bold italic">{t('p5')}</h2>
         </div>
       </Container>
       <Container className="mt-6 md:mt-7">

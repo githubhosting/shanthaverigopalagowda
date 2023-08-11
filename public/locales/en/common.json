@@ -2,6 +2,12 @@
     "name": "Shanthaveri",
     "span": "Gopala Gowda",
     "helpLocize": "With using <1>locize</1> you directly support the future of <3>i18next</3>.",
+    "p1": " Welcome to the official website dedicated to the life and legacy of Sri. Shanthaveri Gopal Gowda, a pioneer of socialism in Karnataka and a prominent socialist leader of India. His leadership began as early as 1951 and he was an exemplary leader that believed in service before self. He dedicated his entire time and life to the welfare of farmers and the downtrodden. He worked tirelessly to establish integrity and accountability in public life. He belonged to a rare breed of politicians who worked selflessly for the genuine upliftment of the poor farmer and the downtrodden sections of society.",
+    "p2": "Ram Manohar Lohia deeply influenced him and he established himself as a mass leader as early as 1951. He was considered charismatic and gained a considerable following.",
+    "p3": "He mentored several socialists in Karnataka including J.H.Patel, Bangarappa, S.M. Krishna, and D. Devaraj Urs who later became Chief Ministers of Karnataka. Urs was inspired and deeply influenced by the depth of the thoughts and sensitivity that Sri Gopala Gowda had for farmers and the downtrodden. The Land Reforms Act and the Renaming of Mysore state to Karnataka had their origins in the association of Devraj Urs to Sri Shanthaveri Gopal Gowda.",
+    "p4": "N. Dharam Singh, the former Chief Minister of Karnataka said in the publication of his biography that Sri Gopal Gowda’s political contributions and the causes that he fought for are significant in the history of the legislature.",
+    "b1": "Read More",
+    "p5": "Please join us as we commemorate his centenary birth year and celebrate his enduring legacy.",
     "timeline": {
         "1": {
             "id": "1",
@@ -14,6 +20,6 @@
             "date": "1941",
             "title": "Entered India’s Freedom Struggle Movement",
             "description": "He was deeply inspired by the Freedom Struggle Movement of Mahatma Gandhiji and joined the movement in 1941"
-          }
+        }
     }
 }
