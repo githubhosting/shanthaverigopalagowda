@@ -71,13 +71,86 @@ const debatepdf = [
   },
 ]
 
-const audios = [
-  {
-    id: 1,
-    title: '1st audio',
-    src: '/audios/file_example.mp3',
-  },
+const AudioPlayer = ({
+  id,
+  src,
+  title,
+  description,
+  activeId,
+  setActiveId,
+  audioRefs,
+}) => {
+  const audioRef = useRef(null)
+
+  const handlePlay = () => {
+    if (activeId === id) {
+      audioRef.current.play()
+    } else {
+      if (activeId !== null) {
+        audioRefs[activeId].current.pause()
+      }
+      audioRef.current.play()
+      setActiveId(id)
+    }
+  }
+
+  const handlePause = () => {
+    if (activeId === id) {
+      audioRef.current.pause()
+    }
+  }
+
+  audioRefs[id] = audioRef
+
+  return (
+    <div
+      key={id}
+      className="rounded-md border bg-slate-100 p-3 shadow-sm dark:border-gray-200 dark:bg-gray-100"
+    >
+      <p className="pt-2 text-center text-lg">{title}</p>
+      <p className="pb-1 text-center text-sm">{description}</p>
+      <audio
+        ref={audioRef}
+        controls={true}
+        onPlay={handlePlay}
+        onPause={handlePause}
+      >
+        <source src={src} type="audio/mpeg" />
+      </audio>
+    </div>
+  )
+}
+
+const titles = [
+  'G P Basavaraj',
+  'Srikanta Kudige',
+  'Justice N D Venkatesh',
+  'Dr. M V Srikanta Heggade',
+  'Maharudrappa',
+  'P Kalinga Rao',
+  'A V Srinivasa',
+  'N K Seetaram',
+  'Khadri Shaamanna',
+  'Ganapathiappa',
+  'B R Shaam Aithal',
+  '',
+  'Dr. Gorur Ramaswamy Iyengar',
+  'Pu. Ti. NarasimhaChar',
+  'Siddaiah Puranikaa',
 ]
+const generateAudios = (titles) => {
+  const audios = titles.map((title, index) => {
+    return {
+      id: index + 1,
+      title: `${index + 1}. ${title}`,
+      description: `Chapter: ${index + 1}`,
+      src: `/audios/Audio-${String(index + 1).padStart(2, '0')}.mp3`,
+    }
+  })
+
+  return audios
+}
+const audios = generateAudios(titles)
 
 function Debate() {
   const onButtonClick = () => {
@@ -221,6 +294,9 @@ export default function Media() {
     return { id: item.id, url: embeddedUrl }
   })
 
+  const [activeId, setActiveId] = useState(null)
+  const audioRefs = useRef({})
+
   return (
     <>
       <Head>
@@ -261,42 +337,20 @@ export default function Media() {
           ))}
         </div>
         <h1 className="mt-10 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
-          Listen to Youtube Audios
-        </h1>
-        <div className="mt-3 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
-          {embedded_audio.map((audioUrl) => (
-            <div key={audioUrl.id} className="mt-6">
-              <iframe
-                className="aspect-video w-full rounded-lg shadow-lg"
-                src={audioUrl.url}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-          ))}
-        </div>
-        <h1 className="mt-10 text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
-          Listen to Youtube Audios
+          Jeevanta Jwale: Audio Series on Shri Shanthaveri Gopala Gowda
         </h1>
         <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6 lg:grid-cols-3">
-          {audios.map((audiosrc, i) => (
-            <div
-              key={i}
-              className="rounded-md border bg-slate-100 p-3 shadow-sm dark:border-gray-200 dark:bg-gray-100"
-            >
-              <p className="py-2 text-center text-lg">{audiosrc.title}</p>
-              <audio
-                controls
-                key={audiosrc.id}
-                src={audiosrc.src}
-                type="audio/mpeg"
-                className="w-full rounded-full border border-gray-300 dark:border-gray-400"
-              >
-                Your browser does not support the
-                <code>audio</code> element.
-              </audio>
-            </div>
+          {audios.map((audio) => (
+            <AudioPlayer
+              key={audio.id}
+              id={audio.id}
+              src={audio.src}
+              title={audio.title}
+              description={audio.description}
+              activeId={activeId}
+              setActiveId={setActiveId}
+              audioRefs={audioRefs.current}
+            />
           ))}
         </div>
       </Container>
