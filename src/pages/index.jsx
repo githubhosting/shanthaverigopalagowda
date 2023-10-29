@@ -30,7 +30,6 @@ import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-
 import { formatDate } from '@/lib/formatDate'
 
 function SocialLink({ icon: Icon, ...props }) {
@@ -40,6 +39,7 @@ function SocialLink({ icon: Icon, ...props }) {
     </Link>
   )
 }
+
 function SocialLinks({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')} key={href}>
@@ -284,48 +284,14 @@ function Events() {
             {t('e0')}
           </h2>
           <ul className="list-none md:list-disc">
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e1')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e2')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e3')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e4')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e5')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e6')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e7')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e8')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e9')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e10')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e11')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e12')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e13')}
-            </li>
-            <li className="mb-3 text-justify text-zinc-800 dark:text-gray-400">
-              {t('e14')}
-            </li>
+            {Array.from({ length: 14 }, (_, index) => (
+              <li
+                className="mb-3 text-left text-zinc-800 dark:text-gray-400"
+                key={index}
+              >
+                {t(`e${index + 1}`)}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
