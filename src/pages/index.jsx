@@ -138,123 +138,106 @@ const timeline = [
     description: 'timeline.1.description',
   },
   {
-    id: 2,
-    date: '1941',
-    title: 'Entered India’s Freedom Struggle Movement',
-    description:
-      'He was deeply inspired by the Freedom Struggle Movement of Mahatma Gandhiji and joined the movement in 1941',
+    id: 'timeline.2.id',
+    date: 'timeline.2.date',
+    title: 'timeline.2.title',
+    description: 'timeline.2.description',
   },
   {
-    id: 3,
-    date: '1942',
-    title: 'Quit India Movement',
-    description:
-      'Took active part in the Quit India Movement, Was kept in Shimoga Jail, was running a Night School for Harijans during this time.',
+    id: 'timeline.3.id',
+    date: 'timeline.3.date',
+    title: 'timeline.3.title',
+    description: 'timeline.3.description',
   },
   {
-    id: 4,
-    date: '1946',
-    title: 'Student Union Congress ',
-    description:
-      'Participated in the Student Union Congress of Nanjangud and left Intermediate studies.',
+    id: 'timeline.4.id',
+    date: 'timeline.4.date',
+    title: 'timeline.4.title',
+    description: 'timeline.4.description',
   },
   {
-    id: 5,
-    date: '1947',
-    title: 'General Secretary',
-    description: 'Fought as General Secretary in Shimoga Student Congress',
-  },
-
-  {
-    id: 6,
-    date: '1948',
-    title: 'Forged an Alliance between Congress and Samajwadi Party',
-    description:
-      'Was instrumental and played a pivotal role in forging an alliance between the Congress and the Samajwadi Party.',
+    id: 'timeline.5.id',
+    date: 'timeline.5.date',
+    title: 'timeline.5.title',
+    description: 'timeline.5.description',
   },
   {
-    id: 7,
-    date: '1949',
-    title: 'Karnataka Samajwadi Party',
-    description:
-      'Organised the First Association of Karnataka Samajwadi Party in Shimoga.',
+    id: 'timeline.6.id',
+    date: 'timeline.6.date',
+    title: 'timeline.6.title',
+    description: 'timeline.6.description',
   },
   {
-    id: 8,
-    date: '1951',
-    title: 'Kagodu Farmers’ Satyagraha Movement',
-    description:
-      'Successfully led an indefinite fast held in Kagodu to provide justice to the farmers of Karnataka, which is still fresh in the minds of people of Kagodu and Karnataka.',
+    id: 'timeline.7.id',
+    date: 'timeline.7.date',
+    title: 'timeline.7.title',
+    description: 'timeline.7.description',
   },
   {
-    id: 9,
-    date: '1951',
-    title: 'Met Dr.RamamanoharLohia in Kagodu and Jayaprakash Narayan',
-    description:
-      'He met with socialist leaders such as Dr. Ramamanohar Lohia, Jayaprakash Narayan and Kamaldevi Chattopadhyay and joined their Socialist party  after quitting the Congress.',
+    id: 'timeline.8.id',
+    date: 'timeline.8.date',
+    title: 'timeline.8.title',
+    description: 'timeline.8.description',
   },
   {
-    id: 10,
-    date: '1952',
-    title: 'Got Elected as M.L.A.',
-    description:
-      'He got elected to the Karnataka Legislature (Mysore Vidhana Sabha) from Sagar-Hosanagar for the first time.',
+    id: 'timeline.9.id',
+    date: 'timeline.9.date',
+    title: 'timeline.9.title',
+    description: 'timeline.9.description',
   },
   {
-    id: 11,
-    date: '1955',
-    title: 'Rashtriya Samajwadi Party',
-    description:
-      'Was appointed as a key member of the Rashtriya Samajwadi Party.',
+    id: 'timeline.10.id',
+    date: 'timeline.10.date',
+    title: 'timeline.10.title',
+    description: 'timeline.10.description',
   },
   {
-    id: 12,
-    date: '1957',
-    title: 'Thirthahalli Constituency',
-    description:
-      'Contested from Thirthahalli Constituency and lost but established the Karnataka Samajwadi Youth Association.',
+    id: 'timeline.11.id',
+    date: 'timeline.11.date',
+    title: 'timeline.11.title',
+    description: 'timeline.11.description',
   },
   {
-    id: 13,
-    date: '1960',
-    title: 'Goa Agitation',
-    description:
-      'Took active part in the Goa Agitation and published the Samajwadi Party’s newsletter called “Margadarshi”',
+    id: 'timeline.12.id',
+    date: 'timeline.12.date',
+    title: 'timeline.12.title',
+    description: 'timeline.12.description',
   },
   {
-    id: 14,
-    date: '1962',
-    title: 'Elected as M.L.A',
-    description:
-      'Run with modest resources, borrowed from his supporters who rose above their communal identities and rallied behind him for his election campaigns. He enjoyed huge admiration and immense local support for his exemplary courage, integrity and charisma.',
+    id: 'timeline.13.id',
+    date: 'timeline.13.date',
+    title: 'timeline.13.title',
+    description: 'timeline.13.description',
   },
   {
-    id: 15,
-    date: '1964',
-    title: 'Marriage to Smt. Sonakka',
-    description:
-      'He married Smt. Sonakka, a school teacher in 1964. One of the few marriages that was solemnized at Vidhana Soudha',
+    id: 'timeline.14.id',
+    date: 'timeline.14.date',
+    title: 'timeline.14.title',
+    description: 'timeline.14.description',
   },
   {
-    id: 16,
-    date: '1967',
-    title: 'Re-elected as M.L.A',
-    description:
-      'Was Reelected as M.L.A. from Thirthahalli Constituency. Daughter, Kum. Ila Geetha was born in the year 1967 in Bengaluru.',
+    id: 'timeline.15.id',
+    date: 'timeline.15.date',
+    title: 'timeline.15.title',
+    description: 'timeline.15.description',
   },
   {
-    id: 17,
-    date: '1968',
-    title: 'Birth of Son - Ramamanohar',
-    description:
-      'Son, Mst. Ramamanohar was born in the year 1968 at Bengaluru.',
+    id: 'timeline.16.id',
+    date: 'timeline.16.date',
+    title: 'timeline.16.title',
+    description: 'timeline.16.description',
   },
   {
-    id: 18,
-    date: '9 June, 1971',
-    title: 'Was admitted to Victoria Hospital',
-    description:
-      'Underwent prolonged but unsuccessful 6 month long treatment at the Bangalore Victoria Hospital, Breathed his last, Cremated at the Wilson Garden Crematorium.',
+    id: 'timeline.17.id',
+    date: 'timeline.17.date',
+    title: 'timeline.17.title',
+    description: 'timeline.17.description',
+  },
+  {
+    id: 'timeline.18.id',
+    date: 'timeline.18.date',
+    title: 'timeline.18.title',
+    description: 'timeline.18.description',
   },
 ]
 function Timeline() {
@@ -262,7 +245,7 @@ function Timeline() {
   return (
     <>
       <h1 className="mb-6 border-t pt-4 text-2xl font-bold tracking-tight text-insp-200 dark:border-zinc-700 dark:text-zinc-100 sm:text-3xl">
-        About Shanthaveri Gopala Gowda
+        {t('timelinetitle')}
       </h1>
       <ol className="border-l border-gray-300">
         {timeline.map((item) => (
@@ -291,7 +274,7 @@ function Timeline() {
 function Events() {
   const { t } = useTranslation()
   return (
-    <>
+    <div>
       <h1 className="mb-6 border-t pt-4 text-2xl font-bold tracking-tight text-insp-200 dark:border-zinc-700 dark:text-zinc-100 sm:text-3xl">
         {t('e')}
       </h1>
@@ -346,7 +329,7 @@ function Events() {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
@@ -369,7 +352,7 @@ function ArrowCircleUpIcon(props) {
     </svg>
   )
 }
-export default function Home({ articles }) {
+export default function Home() {
   const { t } = useTranslation()
   const [showButton, setShowButton] = useState(false)
 
@@ -457,7 +440,7 @@ export default function Home({ articles }) {
           {`function googleTranslateElementInit() {
             new google.translate.TranslateElement({
             pageLanguage: 'en',
-            includedLanguages: 'en,kn,hi,ta,te,ml,mr,',
+            includedLanguages: 'en,hi,ta,te,ml,mr,',
             layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
           }, 'google_translate_element');
         }`}
