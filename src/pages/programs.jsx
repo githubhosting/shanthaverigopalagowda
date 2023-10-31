@@ -2,6 +2,14 @@
 import Head from 'next/head'
 import Image from 'next/future/image'
 import React, { useState, useEffect, useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+import { Autoplay, Pagination, Navigation, EffectFade, Keyboard } from 'swiper'
 
 import { Container } from '@/components/Container'
 import event1_1 from '@/images/events/1 (1).jpg'
@@ -145,9 +153,9 @@ export default function Programs() {
           Events
         </h1>
         <ul className="space-y-4">
-          {events.map((event) => (
+          {events.map((event, index) => (
             <li
-              key={event.id}
+              key={index}
               className="dark:neumorphism mb-10 rounded-2xl border border-slate-100 p-5 shadow-lg dark:border-zinc-600"
             >
               <h3 className="text-center text-lg font-semibold text-gray-900 dark:text-zinc-100">
@@ -156,11 +164,10 @@ export default function Programs() {
               <p className="mt-2 text-center text-gray-700 dark:text-zinc-100/50">
                 {event.date}
               </p>
-
               <div className="mt-4 flex flex-wrap justify-center gap-3">
-                {event.images.map((image) => (
+                {event.images.map((image, index) => (
                   <Image
-                    key={image}
+                    key={index}
                     className="w-1/2 rounded-md object-contain sm:w-1/3 xl:w-1/6"
                     src={image}
                     alt={event.title}
