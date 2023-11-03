@@ -138,6 +138,7 @@ const titles = [
   'Pu. Ti. NarasimhaChar',
   'Siddaiah Puranikaa',
 ]
+
 const generateAudios = (titles) => {
   const audios = titles.map((title, index) => {
     return {
@@ -152,6 +153,33 @@ const generateAudios = (titles) => {
 }
 const audios = generateAudios(titles)
 
+const debate_file_names = [
+  '001. MRA_JUN_JUL_1952-001.pdf',
+  '002. MRA_JUN_JUL_1952-022.pdf',
+  '003. MRA_JUN_JUL_1952-068.pdf',
+  '004. MRA_JUN_JUL_1952-076.pdf',
+  '005. MRA_JUN_JUL_1952-108.pdf',
+  '006. MRA_JUN_JUL_1952-109.pdf',
+]
+
+function downloadFile(index) {
+  const fileName = debate_file_names[index]
+  fetch(`/documents/${fileName}`)
+    .then((response) => response.blob())
+    .then((blob) => {
+      const fileURL = window.URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = fileURL
+      link.download = fileName
+      document.body.appendChild(link) // Append link to body to ensure visibility in certain browsers
+      link.click()
+      document.body.removeChild(link) // Clean up to avoid memory leaks
+    })
+    .catch((error) => {
+      console.error('Download failed:', error)
+    })
+}
+
 function Debate() {
   const onButtonClick = () => {
     fetch('/documents/').then((response) => {
@@ -159,7 +187,7 @@ function Debate() {
         const fileURL = window.URL.createObjectURL(blob)
         let alink = document.createElement('a')
         alink.href = fileURL
-        alink.download = 'Event_Report_2020.pdf'
+        alink.download = debate_file_names[0]
         alink.click()
       })
     })
@@ -170,7 +198,7 @@ function Debate() {
         const fileURL = window.URL.createObjectURL(blob)
         let alink = document.createElement('a')
         alink.href = fileURL
-        alink.download = 'Event_Report_2021.pdf'
+        alink.download = debate_file_names[1]
         alink.click()
       })
     })
@@ -241,6 +269,65 @@ function Debate() {
             </div>
           </div>
         </li>
+      </ul>
+    </>
+  )
+}
+
+function DebateNew() {
+  return (
+    <>
+      <p className="pt-10 text-left text-2xl font-bold text-insp2 dark:text-white">
+        Assembly Debates Extract
+      </p>
+      <ul
+        role="list"
+        className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-10 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
+      >
+        {debate_file_names.map((fileName, index) => {
+          // Extracting the date from the file name assuming it's in the format "MRA_JUN_JUL_1952"
+          const dateMatch = fileName.match(/MRA_(.+)_\d{4}/)
+          const date = dateMatch
+            ? dateMatch[1].replace(/_/g, '-')
+            : 'Unknown Date'
+          const name = fileName.match(/MRA_(.+).pdf/)[1]
+          const year = fileName.match(/MRA_.+_(\d{4})/)[1]
+
+          return (
+            <li
+              key={fileName}
+              className="neumorphism mb-10 rounded-md border border-gray-200 p-5"
+            >
+              <h3 className="text-center text-lg font-semibold text-gray-900 dark:text-zinc-100">
+                {name}
+              </h3>
+              <p className="mt-2 text-center text-gray-700 dark:text-zinc-100/50">
+                Date: {date} {year}
+              </p>
+              <div className="flex justify-center overflow-hidden p-2">
+                <div className="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
+                  <button
+                    onClick={() => downloadFile(index)}
+                    className="flex w-full transform items-center justify-center rounded-md bg-sky-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-sky-500 focus:bg-sky-500 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
+                  >
+                    {/* Assuming DownloadIcon is a component */}
+                    <DownloadIcon />
+                    <span className="mx-1">Download</span>
+                  </button>
+                  <a
+                    href={`/documents/${fileName}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex w-full transform items-center justify-center rounded-md bg-sky-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-sky-500 focus:bg-sky-500 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
+                  >
+                    <ViewIcon />
+                    <span className="mx-1">View</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+          )
+        })}
       </ul>
     </>
   )
@@ -355,7 +442,7 @@ export default function Media() {
         </div>
       </Container>
       <Container className="mt-6 md:mt-7">
-        <Debate />
+        <DebateNew />
       </Container>
     </>
   )
